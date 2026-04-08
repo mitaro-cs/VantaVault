@@ -1,109 +1,66 @@
 <svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="canvasBg" x1="80" y1="46" x2="1188" y2="520" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#121827"/>
-      <stop offset="1" stop-color="#0A101A"/>
+    <linearGradient id="bg" x1="110" y1="46" x2="1166" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFAFC"/>
+      <stop offset="1" stop-color="#EEF1F5"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#A2B0FF"/>
-      <stop offset="1" stop-color="#647BF6"/>
-    </linearGradient>
-    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
-    </linearGradient>
-    <pattern id="dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.15" fill="#E5EBFF" opacity="0.08"/>
-    </pattern>
-    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(312 196) rotate(90) scale(178 154)">
-      <stop stop-color="#7C92FF" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#7C92FF" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(986 360) rotate(90) scale(184 170)">
-      <stop stop-color="#56C8FF" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#56C8FF" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="clip">
-      <rect x="40" y="40" width="1200" height="480" rx="32"/>
-    </clipPath>
+    <filter id="shadow" x="24" y="24" width="1232" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0B0F14" flood-opacity="0.08"/>
+    </filter>
+    <filter id="cardShadow" x="64" y="136" width="1152" height="324" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0B0F14" flood-opacity="0.08"/>
+    </filter>
   </defs>
 
-  <rect width="1280" height="560" fill="#05070D"/>
-  <rect x="40" y="40" width="1200" height="480" rx="32" fill="url(#canvasBg)"/>
+  <rect width="1280" height="560" fill="#F5F5F7"/>
 
-  <g clip-path="url(#clip)">
-    <rect x="40" y="40" width="1200" height="480" rx="32" fill="url(#dots)"/>
-    <rect x="40" y="40" width="1200" height="480" rx="32" fill="url(#glowA)"/>
-    <rect x="40" y="40" width="1200" height="480" rx="32" fill="url(#glowB)"/>
-
-    <rect x="88" y="92" width="98" height="30" rx="9" fill="#171D2A" stroke="#2F394B"/>
-    <text x="137" y="111" fill="#F6F8FD" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Workflow</text>
-    <rect x="198" y="92" width="78" height="30" rx="9" fill="#171D2A" stroke="#2F394B"/>
-    <text x="237" y="111" fill="#BAC4D9" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Docs</text>
-    <rect x="288" y="92" width="86" height="30" rx="9" fill="#171D2A" stroke="#2F394B"/>
-    <text x="331" y="111" fill="#BAC4D9" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Setup</text>
-    <rect x="938" y="92" width="96" height="30" rx="9" fill="#171D2A" stroke="#2F394B"/>
-    <text x="986" y="111" fill="#F6F8FD" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Support</text>
-    <rect x="1048" y="92" width="112" height="30" rx="9" fill="url(#accent)"/>
-    <text x="1104" y="111" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Get Started</text>
-
-    <path d="M192 292H1092" stroke="#273145" stroke-width="4" stroke-linecap="round"/>
-    <path d="M192 292H1092" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 16" opacity="0.5"/>
-
-    <rect x="96" y="150" width="252" height="284" rx="24" fill="rgba(13,19,31,0.66)" stroke="url(#stroke)"/>
-    <text x="126" y="194" fill="#8D97AF" font-size="16" font-family="Courier New, Menlo, monospace">01 / DOWNLOAD</text>
-    <text x="126" y="248" fill="#F6F8FD" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="126" dy="0">Pick your</tspan>
-      <tspan x="126" dy="34">desktop build</tspan>
-    </text>
-    <text x="126" y="332" fill="#C8D1E1" font-size="19" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="126" dy="0">Start with the release page</tspan>
-      <tspan x="126" dy="30">and choose DMG or EXE.</tspan>
-    </text>
-    <rect x="126" y="374" width="122" height="42" rx="14" fill="url(#accent)"/>
-    <text x="187" y="400" fill="#FFFFFF" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">release</text>
-    <circle cx="310" cy="395" r="16" fill="#F6F8FD" stroke="#647BF6" stroke-width="3"/>
-
-    <rect x="372" y="150" width="252" height="284" rx="24" fill="rgba(13,19,31,0.66)" stroke="url(#stroke)"/>
-    <text x="402" y="194" fill="#8D97AF" font-size="16" font-family="Courier New, Menlo, monospace">02 / RUN</text>
-    <text x="402" y="248" fill="#F6F8FD" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="402" dy="0">Launch with</tspan>
-      <tspan x="402" dy="34">one step</tspan>
-    </text>
-    <text x="402" y="332" fill="#C8D1E1" font-size="19" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="402" dy="0">Use the repo bootstrap scripts</tspan>
-      <tspan x="402" dy="30">to install and start locally.</tspan>
-    </text>
-    <rect x="402" y="374" width="124" height="42" rx="14" fill="#101826" stroke="#334054"/>
-    <text x="464" y="400" fill="#F6F8FD" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">bootstrap</text>
-    <circle cx="586" cy="395" r="16" fill="#F6F8FD" stroke="#647BF6" stroke-width="3"/>
-
-    <rect x="648" y="150" width="252" height="284" rx="24" fill="rgba(13,19,31,0.66)" stroke="url(#stroke)"/>
-    <text x="678" y="194" fill="#8D97AF" font-size="16" font-family="Courier New, Menlo, monospace">03 / CONNECT</text>
-    <text x="678" y="248" fill="#F6F8FD" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="678" dy="0">Open the</tspan>
-      <tspan x="678" dy="34">right drive</tspan>
-    </text>
-    <text x="678" y="332" fill="#C8D1E1" font-size="19" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="678" dy="0">VantaVault tracks the</tspan>
-      <tspan x="678" dy="30">preferred removable disk.</tspan>
-    </text>
-    <rect x="678" y="374" width="118" height="42" rx="14" fill="#101826" stroke="#334054"/>
-    <text x="737" y="400" fill="#F6F8FD" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">mount</text>
-    <circle cx="862" cy="395" r="16" fill="#F6F8FD" stroke="#647BF6" stroke-width="3"/>
-
-    <rect x="924" y="150" width="260" height="284" rx="24" fill="rgba(13,19,31,0.66)" stroke="url(#stroke)"/>
-    <text x="954" y="194" fill="#8D97AF" font-size="16" font-family="Courier New, Menlo, monospace">04 / PROTECT</text>
-    <text x="954" y="248" fill="#F6F8FD" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="954" dy="0">Stay local,</tspan>
-      <tspan x="954" dy="34">archive safely</tspan>
-    </text>
-    <text x="954" y="332" fill="#C8D1E1" font-size="19" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="954" dy="0">Use lockout, local auth, and</tspan>
-      <tspan x="954" dy="30">AES archives without the cloud.</tspan>
-    </text>
-    <rect x="954" y="374" width="126" height="42" rx="14" fill="#101826" stroke="#334054"/>
-    <text x="1017" y="400" fill="#F6F8FD" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">secure</text>
-    <circle cx="1146" cy="395" r="16" fill="#F6F8FD" stroke="#647BF6" stroke-width="3"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="40" width="1200" height="480" rx="36" fill="url(#bg)"/>
+    <rect x="40.5" y="40.5" width="1199" height="479" rx="35.5" stroke="#E4E7EB"/>
   </g>
+
+  <text x="96" y="112" fill="#111111" font-size="52" font-weight="700" font-family="Arial, Helvetica, sans-serif">How it works</text>
+  <text x="96" y="154" fill="#6C727C" font-size="22" font-family="Arial, Helvetica, sans-serif">Three calm steps. Download, connect, protect.</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="88" y="184" width="322" height="222" rx="30" fill="#FFFFFF"/>
+    <rect x="88.5" y="184.5" width="321" height="221" rx="29.5" stroke="#E2E6EC"/>
+
+    <rect x="440" y="184" width="322" height="222" rx="30" fill="#FFFFFF"/>
+    <rect x="440.5" y="184.5" width="321" height="221" rx="29.5" stroke="#E2E6EC"/>
+
+    <rect x="792" y="184" width="400" height="222" rx="30" fill="#111111"/>
+    <rect x="792.5" y="184.5" width="399" height="221" rx="29.5" stroke="#2A2A2A"/>
+  </g>
+
+  <text x="122" y="228" fill="#8C939D" font-size="14" font-family="Courier New, Menlo, monospace">01 / DOWNLOAD</text>
+  <text x="122" y="282" fill="#111111" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Get the app</text>
+  <text x="122" y="330" fill="#525860" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    <tspan x="122" dy="0">Start with the latest release.</tspan>
+    <tspan x="122" dy="30">Choose DMG or EXE.</tspan>
+  </text>
+  <rect x="122" y="354" width="112" height="38" rx="19" fill="#111111"/>
+  <text x="178" y="378" fill="#FFFFFF" font-size="14" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Release</text>
+
+  <text x="474" y="228" fill="#8C939D" font-size="14" font-family="Courier New, Menlo, monospace">02 / CONNECT</text>
+  <text x="474" y="282" fill="#111111" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Open the right drive</text>
+  <text x="474" y="330" fill="#525860" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    <tspan x="474" dy="0">VantaVault watches the</tspan>
+    <tspan x="474" dy="30">preferred removable disk.</tspan>
+  </text>
+  <rect x="474" y="354" width="116" height="38" rx="19" fill="#FFFFFF"/>
+  <rect x="474.5" y="354.5" width="115" height="37" rx="18.5" stroke="#D8DDE4"/>
+  <text x="532" y="378" fill="#111111" font-size="14" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Bootstrap</text>
+
+  <text x="826" y="228" fill="#8C939D" font-size="14" font-family="Courier New, Menlo, monospace">03 / PROTECT</text>
+  <text x="826" y="282" fill="#FFFFFF" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Stay local</text>
+  <text x="826" y="330" fill="#B9BEC7" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    <tspan x="826" dy="0">Use local auth, safe lockout,</tspan>
+    <tspan x="826" dy="30">and encrypted archive flow.</tspan>
+  </text>
+  <rect x="826" y="354" width="108" height="38" rx="19" fill="#FFFFFF"/>
+  <text x="880" y="378" fill="#111111" font-size="14" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Secure</text>
+
+  <path d="M410 296H440" stroke="#D4D9E0" stroke-width="2"/>
+  <path d="M762 296H792" stroke="#D4D9E0" stroke-width="2"/>
 </svg>
