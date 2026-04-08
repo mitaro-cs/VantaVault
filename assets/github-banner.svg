@@ -1,34 +1,44 @@
 <svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="pageBg" x1="124" y1="64" x2="1152" y2="600" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#060709"/>
-      <stop offset="0.5" stop-color="#0B0D11"/>
-      <stop offset="1" stop-color="#050608"/>
+    <linearGradient id="pageBg" x1="108" y1="54" x2="1178" y2="608" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090C15"/>
+      <stop offset="0.56" stop-color="#070A12"/>
+      <stop offset="1" stop-color="#05070D"/>
     </linearGradient>
-    <linearGradient id="boardBg" x1="56" y1="40" x2="1230" y2="596" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#101217"/>
-      <stop offset="1" stop-color="#0A0C10"/>
+    <linearGradient id="boardBg" x1="56" y1="42" x2="1224" y2="594" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121826"/>
+      <stop offset="1" stop-color="#0A0E18"/>
     </linearGradient>
-    <linearGradient id="panelBg" x1="760" y1="140" x2="1112" y2="498" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#12161D"/>
-      <stop offset="1" stop-color="#0D1015"/>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(978 246) rotate(129.4) scale(214.501 191.382)">
+      <stop stop-color="#7D92FF" stop-opacity="0.68"/>
+      <stop offset="0.48" stop-color="#56C8FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#56C8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(872 476) rotate(123.62) scale(168.314 148.726)">
+      <stop stop-color="#FF8DD4" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#FF8DD4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassLine" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
     </linearGradient>
-    <linearGradient id="previewGlow" x1="982" y1="310" x2="1038" y2="392" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EAEFF8" stop-opacity="0.72"/>
-      <stop offset="0.58" stop-color="#C8D1E0" stop-opacity="0.34"/>
-      <stop offset="1" stop-color="#98A4B7" stop-opacity="0.08"/>
+    <linearGradient id="primaryButton" x1="1010" y1="92" x2="1128" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93A5FF"/>
+      <stop offset="1" stop-color="#5F78F6"/>
     </linearGradient>
-    <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="1.7" cy="1.7" r="1.15" fill="#F3F4F6" opacity="0.08"/>
+    <linearGradient id="screenGrad" x1="930" y1="308" x2="1046" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.42"/>
+      <stop offset="0.44" stop-color="#86A0FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#16223F" stop-opacity="0.08"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#E7ECFF" opacity="0.08"/>
     </pattern>
-    <filter id="shadow" x="16" y="24" width="1248" height="592" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.42"/>
+    <filter id="shadow" x="18" y="20" width="1244" height="602" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.42"/>
     </filter>
     <clipPath id="boardClip">
       <rect x="40" y="40" width="1200" height="560" rx="34"/>
-    </clipPath>
-    <clipPath id="leftClip">
-      <rect x="88" y="146" width="586" height="420" rx="0"/>
     </clipPath>
   </defs>
 
@@ -40,77 +50,74 @@
 
   <g clip-path="url(#boardClip)">
     <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#dots)"/>
+    <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#blueGlow)"/>
+    <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#pinkGlow)"/>
 
-    <rect x="228" y="86" width="98" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
-    <text x="277" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Open Repo</text>
+    <rect x="90" y="86" width="102" height="32" rx="9" fill="#171D29" stroke="#323A4C"/>
+    <text x="141" y="106" fill="#F6F8FD" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Open Repo</text>
 
-    <rect x="338" y="86" width="82" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
-    <text x="379" y="106" fill="#B8C0CB" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Users</text>
+    <rect x="204" y="86" width="82" height="32" rx="9" fill="#171D29" stroke="#323A4C"/>
+    <text x="245" y="106" fill="#B8C2D8" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Users</text>
 
-    <rect x="432" y="86" width="102" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
-    <text x="483" y="106" fill="#B8C0CB" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Releases</text>
+    <rect x="298" y="86" width="100" height="32" rx="9" fill="#171D29" stroke="#323A4C"/>
+    <text x="348" y="106" fill="#B8C2D8" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Releases</text>
 
-    <rect x="800" y="86" width="86" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
-    <text x="843" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">MIT</text>
+    <rect x="858" y="86" width="82" height="32" rx="9" fill="#171D29" stroke="#323A4C"/>
+    <text x="899" y="106" fill="#F6F8FD" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">MIT</text>
 
-    <rect x="900" y="86" width="104" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
-    <text x="952" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Share</text>
+    <rect x="952" y="86" width="96" height="32" rx="9" fill="#171D29" stroke="#323A4C"/>
+    <text x="1000" y="106" fill="#F6F8FD" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Share</text>
 
-    <rect x="1018" y="86" width="122" height="32" rx="8" fill="#5B8CFF"/>
-    <text x="1079" y="106" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Make Public</text>
+    <rect x="1062" y="86" width="138" height="32" rx="9" fill="url(#primaryButton)"/>
+    <text x="1131" y="106" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Make Public</text>
 
-    <g clip-path="url(#leftClip)">
-      <text x="88" y="174" fill="#8D96A3" font-size="15" letter-spacing="6" font-family="Courier New, Menlo, monospace">PRIVATE DISK VAULT</text>
+    <text x="96" y="178" fill="#8792AC" font-size="15" letter-spacing="6" font-family="Courier New, Menlo, monospace">PREMIUM DISK VAULT</text>
+    <text x="96" y="270" fill="#F6F8FD" font-size="84" font-weight="700" font-family="Arial, Helvetica, sans-serif">VantaVault</text>
 
-      <text x="88" y="256" fill="#F4F5F7" font-size="76" font-weight="700" font-family="Arial, Helvetica, sans-serif">VantaVault</text>
-
-      <text x="88" y="332" fill="#E0E5EC" font-size="22" font-weight="600" font-family="Arial, Helvetica, sans-serif">
-        <tspan x="88" dy="0">Open-source desktop vault</tspan>
-        <tspan x="88" dy="34">for removable drives.</tspan>
-        <tspan x="88" dy="34">Auto-detect, lockout, AES archive, releases and docs.</tspan>
-      </text>
-
-      <rect x="88" y="428" width="188" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
-      <text x="182" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
-
-      <rect x="292" y="428" width="164" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
-      <text x="374" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AES ZIP</text>
-
-      <rect x="472" y="428" width="186" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
-      <text x="565" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
-
-      <path d="M88 518H660" stroke="#232831" stroke-width="1.4"/>
-
-      <text x="88" y="558" fill="#F4F5F7" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Built for users and contributors</text>
-      <text x="88" y="590" fill="#9BA4B0" font-size="19" font-family="Arial, Helvetica, sans-serif">Issues · Releases · Docs · Cross-platform builds</text>
-    </g>
-
-    <path d="M660 450C712 450 728 450 774 450" stroke="#2D323B" stroke-width="2"/>
-
-    <rect x="790" y="140" width="360" height="370" rx="20" fill="url(#panelBg)" stroke="#2E343D"/>
-
-    <rect x="820" y="178" width="300" height="76" rx="16" fill="#10141A" stroke="#2B3139"/>
-    <circle cx="860" cy="216" r="13" fill="#5B8CFF"/>
-    <text x="894" y="224" fill="#F4F5F7" font-size="20" font-weight="700" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
-
-    <rect x="820" y="278" width="300" height="146" rx="16" fill="#10141A" stroke="#2B3139"/>
-    <text x="848" y="312" fill="#8D96A3" font-size="11" font-family="Courier New, Menlo, monospace">OPEN SOURCE STATE</text>
-    <path d="M848 346H942" stroke="#5B8CFF" stroke-width="10" stroke-linecap="round"/>
-    <path d="M942 346H970" stroke="#CBD3E1" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="960" cy="346" r="17" fill="#F4F5F7" stroke="#5B8CFF" stroke-width="3"/>
-    <text x="848" y="392" fill="#F4F5F7" font-size="22" font-weight="700" font-family="Arial, Helvetica, sans-serif">
-      <tspan x="848" dy="0">Ready for</tspan>
-      <tspan x="848" dy="30">Releases</tspan>
+    <text x="96" y="334" fill="#E7EBF6" font-size="24" font-weight="600" font-family="Arial, Helvetica, sans-serif">
+      <tspan x="96" dy="0">A polished desktop vault for removable drives.</tspan>
+      <tspan x="96" dy="38">Auto-detect, safe lockout, recovery and local AES.</tspan>
     </text>
 
-    <rect x="1030" y="300" width="74" height="126" rx="16" fill="#0D1117" stroke="#343B45"/>
-    <rect x="1044" y="318" width="46" height="86" rx="12" fill="url(#previewGlow)"/>
-    <text x="1067" y="432" fill="#B4BDC8" font-size="11" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">preview</text>
+    <rect x="96" y="432" width="176" height="48" rx="16" fill="#121826" stroke="url(#glassLine)"/>
+    <text x="184" y="462" fill="#F6F8FD" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
 
-    <rect x="820" y="442" width="142" height="52" rx="16" fill="#5B8CFF"/>
-    <text x="891" y="474" fill="#FFFFFF" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">EXE + DMG</text>
+    <rect x="286" y="432" width="160" height="48" rx="16" fill="#121826" stroke="url(#glassLine)"/>
+    <text x="366" y="462" fill="#F6F8FD" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AES ARCHIVE</text>
 
-    <rect x="978" y="442" width="142" height="52" rx="16" fill="#10141A" stroke="#2B3139"/>
-    <text x="1049" y="474" fill="#F4F5F7" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">COMMUNITY</text>
+    <rect x="460" y="432" width="176" height="48" rx="16" fill="#121826" stroke="url(#glassLine)"/>
+    <text x="548" y="462" fill="#F6F8FD" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
+
+    <path d="M96 520H642" stroke="#21293A" stroke-width="1.4"/>
+    <text x="96" y="560" fill="#F6F8FD" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Built to wow on first launch</text>
+    <text x="96" y="592" fill="#9CA8C0" font-size="19" font-family="Arial, Helvetica, sans-serif">Elegant UI · Local privacy · One-click setup · Cross-platform releases</text>
+
+    <rect x="760" y="146" width="360" height="354" rx="28" fill="rgba(10,14,24,0.55)" stroke="url(#glassLine)"/>
+    <rect x="784" y="170" width="312" height="68" rx="20" fill="rgba(14,20,33,0.72)" stroke="#313A4D"/>
+    <circle cx="824" cy="204" r="13" fill="#7C92FF"/>
+    <text x="856" y="212" fill="#F6F8FD" font-size="22" font-weight="700" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
+
+    <rect x="784" y="256" width="312" height="30" rx="14" fill="rgba(255,255,255,0.04)"/>
+    <rect x="796" y="262" width="50" height="18" rx="9" fill="#2C3B6E"/>
+    <rect x="856" y="262" width="62" height="18" rx="9" fill="#6E7CC7"/>
+    <rect x="928" y="262" width="48" height="18" rx="9" fill="#3F528E"/>
+    <rect x="986" y="262" width="42" height="18" rx="9" fill="#223052"/>
+    <rect x="1038" y="262" width="46" height="18" rx="9" fill="#28466D"/>
+
+    <rect x="784" y="302" width="312" height="142" rx="24" fill="rgba(13,19,32,0.72)" stroke="#2E3748"/>
+    <rect x="806" y="322" width="122" height="102" rx="22" fill="#121A2D" stroke="#394355"/>
+    <rect x="818" y="334" width="98" height="78" rx="18" fill="url(#screenGrad)"/>
+    <rect x="944" y="322" width="130" height="44" rx="16" fill="rgba(255,255,255,0.04)" stroke="#394355"/>
+    <text x="960" y="350" fill="#8B96AE" font-size="11" font-family="Courier New, Menlo, monospace">WORKSPACE</text>
+    <text x="944" y="394" fill="#F6F8FD" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">
+      <tspan x="944" dy="0">Ready for</tspan>
+      <tspan x="944" dy="32">release</tspan>
+    </text>
+
+    <rect x="784" y="460" width="146" height="40" rx="14" fill="url(#primaryButton)"/>
+    <text x="857" y="485" fill="#FFFFFF" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">EXE + DMG</text>
+
+    <rect x="948" y="460" width="148" height="40" rx="14" fill="#111826" stroke="#303A4B"/>
+    <text x="1022" y="485" fill="#F6F8FD" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">COMMUNITY</text>
   </g>
 </svg>

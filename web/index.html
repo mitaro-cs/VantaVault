@@ -14,37 +14,54 @@
 
         <div class="shell">
             <aside class="sidebar">
-                <div class="brand">
+                <section class="brand-card">
+                    <div class="brand-header">
+                        <p class="eyebrow">Private disk vault</p>
+                        <span class="mini-chip">Local only</span>
+                    </div>
+
                     <div class="brand-lockup">
                         <div class="logo-mark" aria-hidden="true">
                             <span class="logo-mark-main">V</span>
                             <span class="logo-mark-sub">Vw</span>
                         </div>
-                        <div>
-                            <p class="eyebrow">Private disk vault</p>
+                        <div class="brand-copy">
                             <h1>VantaVault</h1>
+                            <p class="sidebar-copy">
+                                Премиальный desktop-vault для внешнего диска:
+                                автопоиск, локальная защита, recovery и AES-архивы
+                                в одном понятном рабочем пространстве.
+                            </p>
                         </div>
                     </div>
-                    <p class="sidebar-copy">
-                        Локальный vault для внешнего диска: автопоиск, настройки по
-                        умолчанию и AES-архивы в одном окне.
-                    </p>
-                </div>
+
+                    <div class="brand-badges">
+                        <span class="mini-chip">Auto detect</span>
+                        <span class="mini-chip">Safe lockout</span>
+                        <span class="mini-chip">AES archive</span>
+                    </div>
+                </section>
 
                 <section class="panel presence-panel">
                     <div class="panel-head">
-                        <h2>Статус диска</h2>
+                        <div>
+                            <p class="eyebrow">Target disk</p>
+                            <h2>Статус vault</h2>
+                        </div>
                         <span id="signal-chip" class="signal-chip">Поиск</span>
                     </div>
 
                     <div class="presence-card">
-                        <p class="eyebrow">Целевой диск</p>
-                        <h3 id="preferred-volume-name" class="presence-title">
-                            VantaVault
-                        </h3>
-                        <p id="preferred-volume-copy" class="presence-copy">
-                            Проверяю подключение внешнего диска.
-                        </p>
+                        <div class="presence-orb" aria-hidden="true"></div>
+
+                        <div class="presence-copy-block">
+                            <h3 id="preferred-volume-name" class="presence-title">
+                                VantaVault
+                            </h3>
+                            <p id="preferred-volume-copy" class="presence-copy">
+                                Проверяю подключение внешнего диска.
+                            </p>
+                        </div>
 
                         <div class="presence-meta">
                             <div class="meta-chip">
@@ -78,7 +95,10 @@
 
                 <section class="panel disk-panel">
                     <div class="panel-head">
-                        <h2>Подключенные диски</h2>
+                        <div>
+                            <p class="eyebrow">Mounted volumes</p>
+                            <h2>Подключенные диски</h2>
+                        </div>
                         <button id="refresh-volumes" class="chip-btn" type="button">
                             Обновить
                         </button>
@@ -86,26 +106,62 @@
                     <div id="volumes-list" class="volume-list"></div>
                 </section>
 
-                <section class="panel side-note">
-                    <h2>Как это работает</h2>
-                    <p>
-                        VantaVault отслеживает подключение целевого диска,
-                        автоматически открывает его в приложении и при необходимости
-                        предлагает подключить устройство к системе.
-                    </p>
-                    <p>
-                        После серии неверных паролей включается безопасная блокировка.
-                        Автостирание данных не используется.
-                    </p>
+                <section class="panel guide-panel">
+                    <div class="panel-head">
+                        <div>
+                            <p class="eyebrow">Flow</p>
+                            <h2>Как это работает</h2>
+                        </div>
+                    </div>
+
+                    <div class="guide-list">
+                        <article class="guide-item">
+                            <span class="guide-index">01</span>
+                            <div class="guide-body">
+                                <strong>Подключи диск</strong>
+                                <p>
+                                    VantaVault заметит целевой том и подскажет,
+                                    когда рабочее пространство снова доступно.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="guide-item">
+                            <span class="guide-index">02</span>
+                            <div class="guide-body">
+                                <strong>Открой vault</strong>
+                                <p>
+                                    Вход защищен локальным паролем и временным
+                                    lockout вместо разрушительного auto-wipe.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="guide-item">
+                            <span class="guide-index">03</span>
+                            <div class="guide-body">
+                                <strong>Архивируй безопасно</strong>
+                                <p>
+                                    Файлы и папки можно упаковать в AES-архив или
+                                    создать recovery-поток прямо из интерфейса.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
                 </section>
             </aside>
 
             <main class="content">
                 <header class="topbar">
-                    <div>
+                    <div class="topbar-copy">
                         <p class="eyebrow">VantaVault workspace</p>
-                        <h2>Внешний диск под контролем</h2>
+                        <h2>Премиальный контроль для внешнего диска</h2>
+                        <p class="topbar-subtle">
+                            Все важное собрано в одном чистом пространстве: статус
+                            диска, защита доступа, архивы и содержимое vault.
+                        </p>
                     </div>
+
                     <div class="topbar-actions">
                         <button id="open-finder" class="ghost-btn" type="button">
                             Открыть в Finder
@@ -120,55 +176,125 @@
                 </header>
 
                 <section class="hero-card">
-                    <div class="hero-copy">
-                        <div class="hero-title-row">
-                            <div>
-                                <p class="eyebrow">Активный диск</p>
+                    <div class="hero-grid">
+                        <div class="hero-copy">
+                            <div class="hero-intro">
+                                <p class="eyebrow">Control room</p>
                                 <h3 id="hero-volume-name">Нет диска</h3>
                                 <p id="hero-path" class="hero-path">/</p>
+                                <p class="hero-description">
+                                    Красивое и понятное рабочее пространство для
+                                    внешнего диска: статус подключения, объем,
+                                    быстрые действия и архивирование без лишнего шума.
+                                </p>
                             </div>
-                            <div id="hero-volume-badge" class="hero-badge">
-                                Ожидание
+
+                            <div class="hero-metrics">
+                                <article class="metric">
+                                    <span>Объем</span>
+                                    <strong id="metric-total">-</strong>
+                                </article>
+                                <article class="metric">
+                                    <span>Свободно</span>
+                                    <strong id="metric-free">-</strong>
+                                </article>
+                                <article class="metric">
+                                    <span>В каталоге</span>
+                                    <strong id="metric-items">0</strong>
+                                </article>
+                            </div>
+
+                            <div class="storage-wrap">
+                                <div class="storage-head">
+                                    <span>Storage usage</span>
+                                    <div id="hero-volume-badge" class="hero-badge">
+                                        Ожидание
+                                    </div>
+                                </div>
+                                <div class="storage-bar">
+                                    <div
+                                        id="storage-used-bar"
+                                        class="storage-bar-fill"
+                                    ></div>
+                                </div>
+                            </div>
+
+                            <div class="hero-actions">
+                                <button id="back-btn" class="chip-btn" type="button">
+                                    Назад
+                                </button>
+                                <button
+                                    id="open-current-btn"
+                                    class="chip-btn"
+                                    type="button"
+                                >
+                                    Открыть текущую папку
+                                </button>
+                                <button
+                                    id="encrypt-current-btn"
+                                    class="chip-btn"
+                                    type="button"
+                                >
+                                    AES для папки
+                                </button>
+                                <button
+                                    id="recovery-backup-btn"
+                                    class="chip-btn"
+                                    type="button"
+                                >
+                                    Recovery-архив
+                                </button>
                             </div>
                         </div>
 
-                        <div class="hero-brand-mark" aria-hidden="true">
-                            <span class="logo-mark-main">V</span>
-                            <span class="logo-mark-sub">Vw</span>
-                        </div>
+                        <div class="hero-preview">
+                            <div class="hero-preview-head">
+                                <span class="mini-chip">Premium UI</span>
+                                <span class="mini-chip">Desktop ready</span>
+                            </div>
 
-                        <div class="hero-metrics">
-                            <article class="metric">
-                                <span>Объем</span>
-                                <strong id="metric-total">-</strong>
-                            </article>
-                            <article class="metric">
-                                <span>Свободно</span>
-                                <strong id="metric-free">-</strong>
-                            </article>
-                            <article class="metric">
-                                <span>В каталоге</span>
-                                <strong id="metric-items">0</strong>
-                            </article>
-                        </div>
+                            <div class="hero-gallery" aria-hidden="true">
+                                <div class="hero-thumb hero-thumb-a"></div>
+                                <div class="hero-thumb hero-thumb-b hero-thumb-active"></div>
+                                <div class="hero-thumb hero-thumb-c"></div>
+                                <div class="hero-thumb hero-thumb-d"></div>
+                                <div class="hero-thumb hero-thumb-e"></div>
+                            </div>
 
-                        <div class="storage-bar">
-                            <div id="storage-used-bar" class="storage-bar-fill"></div>
-                        </div>
+                            <article class="hero-focus-card">
+                                <div class="hero-focus-visual">
+                                    <div class="hero-focus-glow"></div>
+                                    <div class="hero-focus-screen">
+                                        <span class="hero-focus-label">vault preview</span>
+                                    </div>
+                                </div>
 
-                        <div class="hero-actions">
-                            <button id="back-btn" class="chip-btn" type="button">
-                                Назад
-                            </button>
-                            <button id="open-current-btn" class="chip-btn" type="button">
-                                Открыть текущую папку
-                            </button>
-                            <button id="encrypt-current-btn" class="chip-btn" type="button">
-                                AES для папки
-                            </button>
-                            <button id="recovery-backup-btn" class="chip-btn" type="button">
-                                Recovery-архив
-                            </button>
+                                <div class="hero-focus-copy">
+                                    <h4>VantaVault live workspace</h4>
+                                    <p>
+                                        Глубокие материалы, стеклянные панели,
+                                        понятные акценты и clean product hierarchy
+                                        вокруг реально полезных функций.
+                                    </p>
+
+                                    <div class="hero-focus-pills">
+                                        <span class="mini-chip">AES</span>
+                                        <span class="mini-chip">Lockout</span>
+                                        <span class="mini-chip">Recovery</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="hero-bottom-grid">
+                                <div class="glance-card">
+                                    <span>Default disk</span>
+                                    <strong>Ready to mount</strong>
+                                </div>
+                                <div class="glance-card">
+                                    <span>Archive flow</span>
+                                    <strong>Encrypted locally</strong>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -176,12 +302,17 @@
                 <section class="tools-grid">
                     <article class="panel tool-panel">
                         <div class="panel-head">
-                            <h2>Защита входа</h2>
+                            <div>
+                                <p class="eyebrow">Access guard</p>
+                                <h2>Защита входа</h2>
+                            </div>
                             <span id="attempt-counter" class="inline-chip">0 / 5</span>
                         </div>
+
                         <p id="security-status-copy" class="tool-copy">
                             Проверка защитного состояния.
                         </p>
+
                         <div class="tool-meta">
                             <div class="meta-chip">
                                 <span>Lockout</span>
@@ -196,13 +327,18 @@
 
                     <article class="panel tool-panel">
                         <div class="panel-head">
-                            <h2>AES-архивы</h2>
+                            <div>
+                                <p class="eyebrow">Archive flow</p>
+                                <h2>AES-архивы</h2>
+                            </div>
                             <span class="inline-chip">pyzipper AES</span>
                         </div>
+
                         <p id="encryption-status-copy" class="tool-copy">
                             Создавай шифрованные архивы для папок и файлов прямо из
                             интерфейса.
                         </p>
+
                         <div class="tool-meta">
                             <div class="meta-chip">
                                 <span>Быстрый режим</span>
@@ -219,7 +355,8 @@
                 <section class="browser-panel panel">
                     <div class="panel-head browser-head">
                         <div>
-                            <h2>Содержимое</h2>
+                            <p class="eyebrow">Contents</p>
+                            <h2>Содержимое vault</h2>
                             <div id="breadcrumbs" class="breadcrumbs"></div>
                         </div>
 
@@ -246,9 +383,13 @@
                         <span class="logo-mark-sub">Vw</span>
                     </div>
                 </div>
-                <p class="eyebrow">Private access</p>
-                <h2 id="gate-title">VantaVault</h2>
-                <p id="gate-copy" class="gate-copy"></p>
+
+                <div class="gate-copy-block">
+                    <p class="eyebrow">Private access</p>
+                    <h2 id="gate-title">VantaVault</h2>
+                    <p id="gate-copy" class="gate-copy"></p>
+                </div>
+
                 <form id="auth-form" class="auth-form">
                     <label>
                         Пароль

@@ -353,8 +353,14 @@ function renderVolumes() {
       const active = volume.id === state.currentVolume
       const preferred = volume.id === preferredId
       return `
-        <button class="volume-card ${active ? "active" : ""}" type="button" data-volume="${escapeHtml(volume.id)}">
-          <div>
+        <button
+          class="volume-card ${active ? "active" : ""}"
+          type="button"
+          data-volume="${escapeHtml(volume.id)}"
+          data-default="${preferred ? "true" : "false"}"
+        >
+          <div class="volume-copy">
+            <small class="volume-caption">Mounted volume</small>
             <strong>${escapeHtml(volume.name)}</strong>
             <span>${escapeHtml(volume.free_label)} свободно</span>
           </div>
@@ -374,13 +380,18 @@ function renderHero() {
   const used = volume ? volume.used_bytes : 0
   const usedPercent = total > 0 ? Math.max(6, Math.round((used / total) * 100)) : 0
 
-  dom.heroVolumeName.textContent = volume ? volume.name : "Нет диска"
-  dom.heroPath.textContent = state.currentPath ? `/${state.currentPath}` : "/"
+  dom.heroVolumeName.textContent = volume ? volume.name : preferredLabel()
+  dom.heroPath.textContent = volume
+    ? state.currentPath
+      ? `/${state.currentPath}`
+      : "/"
+    : "Подключи внешний диск"
   dom.heroVolumeBadge.textContent = volume
     ? state.preferredConnected && state.preferredVolume?.id === volume.id
-      ? "VantaVault online"
-      : "Подключен"
-    : "Ожидание"
+      ? "Default / online"
+      : "Mounted"
+    : "Waiting"
+  dom.heroVolumeBadge.dataset.state = volume ? "online" : "waiting"
   dom.metricTotal.textContent = volume ? volume.total_label : "-"
   dom.metricFree.textContent = volume ? volume.free_label : "-"
   dom.metricItems.textContent = String(
@@ -391,6 +402,8 @@ function renderHero() {
 
 function renderSecurityPanel() {
   dom.attemptCounter.textContent = `${state.failedAttempts} / ${state.failedAttemptLimit}`
+  dom.attemptCounter.dataset.alert =
+    state.lockoutRemainingSeconds > 0 || state.failedAttempts > 0 ? "true" : "false"
   dom.lockoutCounter.textContent =
     state.lockoutRemainingSeconds > 0
       ? humanizeSeconds(state.lockoutRemainingSeconds)
@@ -465,9 +478,15 @@ function renderItems() {
       const meta = item.is_dir ? typeLabel : `${typeLabel} · ${item.size_label || "-"}`
       const toolLabel = isArchiveItem(item) ? "Распаковать" : "AES архив"
       const toolAttr = isArchiveItem(item) ? "data-decrypt" : "data-encrypt"
+      const iconLabel = item.is_dir ? "DIR" : isArchiveItem(item) ? "ARC" : "FILE"
       return `
-        <article class="item-card" data-path="${escapeHtml(item.relative_path)}" data-dir="${item.is_dir ? "true" : "false"}">
-          <div class="item-icon">${item.is_dir ? "D" : isArchiveItem(item) ? "Z" : "F"}</div>
+        <article
+          class="item-card"
+          data-path="${escapeHtml(item.relative_path)}"
+          data-dir="${item.is_dir ? "true" : "false"}"
+          data-archive="${isArchiveItem(item) ? "true" : "false"}"
+        >
+          <div class="item-icon">${iconLabel}</div>
           <div class="item-copy">
             <strong>${escapeHtml(item.name)}</strong>
             <span>${escapeHtml(meta)}</span>
