@@ -12,15 +12,15 @@
 
 <p align="center">
   <a href="https://github.com/mitaro-cs/VantaVault/releases/latest">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/mitaro-cs/VantaVault?display_name=tag&style=for-the-badge&label=latest%20release&color=72C6FF&labelColor=11151B">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/mitaro-cs/VantaVault?display_name=tag&style=for-the-badge&label=latest%20release&color=F3F4F6&labelColor=111111">
   </a>
   <a href="https://github.com/mitaro-cs/VantaVault/releases/latest">
-    <img alt="Download" src="https://img.shields.io/badge/Download-Releases-ECD7B3?style=for-the-badge&labelColor=11151B">
+    <img alt="Download" src="https://img.shields.io/badge/Download-Releases-F3F4F6?style=for-the-badge&labelColor=111111">
   </a>
-  <img alt="macOS" src="https://img.shields.io/badge/macOS-supported-11151B?style=for-the-badge&logo=apple&logoColor=white">
-  <img alt="Windows" src="https://img.shields.io/badge/Windows-supported-11151B?style=for-the-badge&logo=windows&logoColor=white">
-  <img alt="pywebview" src="https://img.shields.io/badge/pywebview-desktop%20shell-ECD7B3?style=for-the-badge&labelColor=11151B">
-  <img alt="AES" src="https://img.shields.io/badge/AES-local%20archives-71F0BF?style=for-the-badge&labelColor=11151B">
+  <img alt="macOS" src="https://img.shields.io/badge/macOS-supported-F3F4F6?style=for-the-badge&logo=apple&logoColor=111111&labelColor=111111">
+  <img alt="Windows" src="https://img.shields.io/badge/Windows-supported-F3F4F6?style=for-the-badge&logo=windows&logoColor=111111&labelColor=111111">
+  <img alt="pywebview" src="https://img.shields.io/badge/pywebview-desktop%20shell-F3F4F6?style=for-the-badge&labelColor=111111">
+  <img alt="AES" src="https://img.shields.io/badge/AES-local%20archives-F3F4F6?style=for-the-badge&labelColor=111111">
 </p>
 
 <p align="center">
