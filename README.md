@@ -27,11 +27,12 @@
 
 <p align="center">
   <a href="#обзор">Обзор</a> ·
-  <a href="#ключевые-сценарии">Ключевые сценарии</a> ·
   <a href="#скачать">Скачать</a> ·
+  <a href="#быстрый-старт">Быстрый старт</a> ·
+  <a href="#запуск-из-репозитория">Запуск из репозитория</a> ·
+  <a href="#документация">Документация</a> ·
   <a href="#для-открытого-репозитория">Open Source</a> ·
   <a href="#как-помочь">Как помочь</a> ·
-  <a href="#локальный-запуск">Локальный запуск</a> ·
   <a href="#сборка-релизов">Сборка релизов</a> ·
   <a href="#безопасность">Безопасность</a> ·
   <a href="#лицензия">Лицензия</a> ·
@@ -98,23 +99,95 @@ AES-архивирование прямо в рабочий интерфейс.
 
 ## Скачать
 
-Главная точка скачивания для пользователей:
+Если пользователю нужен самый простой путь, без исходников и терминала:
 
-<p>
-  <a href="https://github.com/mitaro-cs/VantaVault/releases/latest"><strong>Открыть Latest Release</strong></a>
-</p>
+1. открыть [Latest Release](https://github.com/mitaro-cs/VantaVault/releases/latest);
+2. скачать файл под свою систему;
+3. запустить приложение.
 
-В каждом релизе пользователю будут доступны:
+Файлы релиза:
 
 - `VantaVault-vX.Y.Z-macos.dmg`
 - `VantaVault-vX.Y.Z-windows-x64.exe`
 - `SHA256`-файлы для проверки скачанного билда
 
-Так релизы выглядят чище:
+Это основной user-friendly путь для большинства людей.
 
-- человек сразу видит номер версии;
-- `macOS` и `Windows` лежат рядом в одном релизе;
-- имя файла уже объясняет, что именно скачивается.
+## Быстрый старт
+
+Есть два нормальных сценария:
+
+| Что нужно | Какой путь выбрать |
+| --- | --- |
+| Просто пользоваться приложением | Скачать готовый релиз |
+| Запустить проект локально из GitHub | Использовать bootstrap-скрипт |
+
+### Для обычного пользователя
+
+- перейти в `Releases`;
+- скачать `dmg` или `exe`;
+- открыть приложение;
+- задать пароль и выбрать внешний диск по умолчанию.
+
+### Для запуска из GitHub-репозитория
+
+- клонировать репозиторий;
+- запустить один из файлов: `main`, `main.ps1` или `main.bat`;
+- дождаться автоматической установки зависимостей;
+- открыть приложение.
+
+Подробная инструкция: [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md)
+
+## Запуск из репозитория
+
+### macOS / Linux
+
+```bash
+git clone https://github.com/mitaro-cs/VantaVault.git
+cd VantaVault
+chmod +x main
+./main
+```
+
+### Windows PowerShell
+
+```powershell
+git clone https://github.com/mitaro-cs/VantaVault.git
+cd VantaVault
+.\main.ps1
+```
+
+### Windows double-click
+
+- открой `main.bat`
+
+Что делает bootstrap:
+
+- создает `.venv`;
+- ставит зависимости из `requirements-desktop.txt`;
+- запускает `VantaVault`;
+- переиспользует окружение при следующих запусках.
+
+Если нужен только install без запуска:
+
+```bash
+./main --install-only
+```
+
+Или на Windows:
+
+```powershell
+.\main.ps1 --install-only
+```
+
+## Документация
+
+Для обычного пользователя и для self-host / local deploy теперь есть отдельные документы:
+
+- [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md)
+- [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
+- [SECURITY.md](SECURITY.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Для открытого репозитория
 
@@ -122,6 +195,7 @@ AES-архивирование прямо в рабочий интерфейс.
 
 - есть `MIT`-лицензия для свободного использования;
 - есть versioned releases с готовыми `dmg` и `exe`;
+- есть bootstrap-скрипты для локального запуска на своем ПК;
 - есть шаблоны для багов, feature request и `pull request`;
 - есть отдельные документы для вклада в проект, безопасности и правил сообщества;
 - GitHub-витрина оформлена как продуктовая landing-страница, а не как сырой список файлов.
@@ -140,28 +214,11 @@ AES-архивирование прямо в рабочий интерфейс.
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [SECURITY.md](SECURITY.md)
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md)
+- [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
 - [.github/ISSUE_TEMPLATE/bug_report.yml](.github/ISSUE_TEMPLATE/bug_report.yml)
 - [.github/ISSUE_TEMPLATE/feature_request.yml](.github/ISSUE_TEMPLATE/feature_request.yml)
 - [.github/pull_request_template.md](.github/pull_request_template.md)
-
-## Локальный запуск
-
-```bash
-cd "/Users/mitaro/Equilibrium/Zed/VantaVault"
-python3 desktop.py
-```
-
-Для web-режима без desktop shell:
-
-```text
-http://127.0.0.1:8421
-```
-
-Или через launcher:
-
-```bash
-./main
-```
 
 ## Зависимости
 
@@ -181,7 +238,8 @@ python3 -m pip install -r requirements-desktop.txt
 ### macOS
 
 ```bash
-cd "/Users/mitaro/Equilibrium/Zed/VantaVault"
+git clone https://github.com/mitaro-cs/VantaVault.git
+cd VantaVault
 ./scripts/build_mac.sh
 ```
 
@@ -221,8 +279,10 @@ git push origin v0.2.0
 | --- | --- |
 | `app.py` | локальный HTTP backend, логика дисков, настройки, lockout, AES-архивы |
 | `desktop.py` | desktop launcher на `pywebview` |
+| `main` / `main.ps1` / `main.bat` | user-friendly запуск проекта на своем ПК |
 | `web/` | интерфейс приложения |
 | `assets/` | визуальные assets, включая GitHub-баннер |
+| `docs/` | инструкции для запуска, установки и troubleshooting |
 | `scripts/` | сборка, очистка и генерация иконок |
 | `tests/` | локальные unit-тесты |
 | `STYLEGUIDE.md` | общая дизайн-система проекта |
@@ -260,7 +320,8 @@ python3 -m unittest discover -s tests -v
 ## Статус
 
 Проект уже выглядит как рабочий desktop-vault, а не как сырой прототип: есть локальная защита,
-автодетект внешнего диска, recovery-поток и витринное оформление для GitHub-страницы репозитория.
+автодетект внешнего диска, recovery-поток, GitHub-витрина и понятный путь для любого пользователя,
+который хочет просто скачать приложение или развернуть его у себя на ПК из репозитория.
 
 ## Лицензия
 

@@ -1,4 +1,15 @@
-#!/bin/zsh
+#!/usr/bin/env sh
+set -eu
 
-cd "$(dirname "$0")"
-exec python3 desktop.py
+ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN="python3"
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_BIN="python"
+else
+  echo "VantaVault requires Python 3. Install Python and run this script again." >&2
+  exit 1
+fi
+
+exec "$PYTHON_BIN" "$ROOT/scripts/bootstrap.py" "$@"
