@@ -41,23 +41,23 @@
   <g clip-path="url(#boardClip)">
     <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#dots)"/>
 
-    <rect x="228" y="86" width="98" height="32" rx="10" fill="#171A20" stroke="#2C3139"/>
+    <rect x="228" y="86" width="98" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
     <text x="277" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Open Repo</text>
 
-    <rect x="338" y="86" width="82" height="32" rx="10" fill="#171A20" stroke="#2C3139"/>
+    <rect x="338" y="86" width="82" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
     <text x="379" y="106" fill="#B8C0CB" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Users</text>
 
-    <rect x="432" y="86" width="102" height="32" rx="10" fill="#171A20" stroke="#2C3139"/>
+    <rect x="432" y="86" width="102" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
     <text x="483" y="106" fill="#B8C0CB" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Releases</text>
 
-    <rect x="800" y="86" width="86" height="32" rx="10" fill="#171A20" stroke="#2C3139"/>
+    <rect x="800" y="86" width="86" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
     <text x="843" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">MIT</text>
 
-    <rect x="900" y="86" width="104" height="32" rx="10" fill="#171A20" stroke="#2C3139"/>
+    <rect x="900" y="86" width="104" height="32" rx="8" fill="#171A20" stroke="#2C3139"/>
     <text x="952" y="106" fill="#F3F4F6" font-size="12" font-weight="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Share</text>
 
-    <rect x="1018" y="86" width="122" height="32" rx="10" fill="#F3F4F6"/>
-    <text x="1079" y="106" fill="#0B0D11" font-size="12" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Make Public</text>
+    <rect x="1018" y="86" width="122" height="32" rx="8" fill="#5B8CFF"/>
+    <text x="1079" y="106" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Make Public</text>
 
     <g clip-path="url(#leftClip)">
       <text x="88" y="174" fill="#8D96A3" font-size="15" letter-spacing="6" font-family="Courier New, Menlo, monospace">PRIVATE DISK VAULT</text>
@@ -70,13 +70,13 @@
         <tspan x="88" dy="34">Auto-detect, lockout, AES archive, releases and docs.</tspan>
       </text>
 
-      <rect x="88" y="428" width="188" height="48" rx="24" fill="#141820" stroke="#2E343D"/>
+      <rect x="88" y="428" width="188" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
       <text x="182" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
 
-      <rect x="292" y="428" width="164" height="48" rx="24" fill="#141820" stroke="#2E343D"/>
+      <rect x="292" y="428" width="164" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
       <text x="374" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">AES ZIP</text>
 
-      <rect x="472" y="428" width="186" height="48" rx="24" fill="#141820" stroke="#2E343D"/>
+      <rect x="472" y="428" width="186" height="48" rx="16" fill="#141820" stroke="#2E343D"/>
       <text x="565" y="458" fill="#F4F5F7" font-size="16" text-anchor="middle" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
 
       <path d="M88 518H660" stroke="#232831" stroke-width="1.4"/>
@@ -87,29 +87,30 @@
 
     <path d="M660 450C712 450 728 450 774 450" stroke="#2D323B" stroke-width="2"/>
 
-    <rect x="790" y="140" width="360" height="370" rx="30" fill="url(#panelBg)" stroke="#2E343D"/>
+    <rect x="790" y="140" width="360" height="370" rx="20" fill="url(#panelBg)" stroke="#2E343D"/>
 
-    <rect x="820" y="178" width="300" height="76" rx="22" fill="#10141A" stroke="#2B3139"/>
-    <circle cx="860" cy="216" r="13" fill="#F4F5F7"/>
+    <rect x="820" y="178" width="300" height="76" rx="16" fill="#10141A" stroke="#2B3139"/>
+    <circle cx="860" cy="216" r="13" fill="#5B8CFF"/>
     <text x="894" y="224" fill="#F4F5F7" font-size="20" font-weight="700" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
 
-    <rect x="820" y="278" width="300" height="146" rx="24" fill="#10141A" stroke="#2B3139"/>
+    <rect x="820" y="278" width="300" height="146" rx="16" fill="#10141A" stroke="#2B3139"/>
     <text x="848" y="312" fill="#8D96A3" font-size="11" font-family="Courier New, Menlo, monospace">OPEN SOURCE STATE</text>
-    <path d="M848 346H970" stroke="#E6EBF2" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="960" cy="346" r="17" fill="#F4F5F7"/>
+    <path d="M848 346H942" stroke="#5B8CFF" stroke-width="10" stroke-linecap="round"/>
+    <path d="M942 346H970" stroke="#CBD3E1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="960" cy="346" r="17" fill="#F4F5F7" stroke="#5B8CFF" stroke-width="3"/>
     <text x="848" y="392" fill="#F4F5F7" font-size="22" font-weight="700" font-family="Arial, Helvetica, sans-serif">
       <tspan x="848" dy="0">Ready for</tspan>
       <tspan x="848" dy="30">Releases</tspan>
     </text>
 
-    <rect x="1030" y="300" width="74" height="126" rx="22" fill="#0D1117" stroke="#343B45"/>
-    <rect x="1044" y="318" width="46" height="86" rx="16" fill="url(#previewGlow)"/>
+    <rect x="1030" y="300" width="74" height="126" rx="16" fill="#0D1117" stroke="#343B45"/>
+    <rect x="1044" y="318" width="46" height="86" rx="12" fill="url(#previewGlow)"/>
     <text x="1067" y="432" fill="#B4BDC8" font-size="11" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">preview</text>
 
-    <rect x="820" y="442" width="142" height="52" rx="18" fill="#10141A" stroke="#2B3139"/>
-    <text x="891" y="474" fill="#F4F5F7" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">EXE + DMG</text>
+    <rect x="820" y="442" width="142" height="52" rx="16" fill="#5B8CFF"/>
+    <text x="891" y="474" fill="#FFFFFF" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">EXE + DMG</text>
 
-    <rect x="978" y="442" width="142" height="52" rx="18" fill="#10141A" stroke="#2B3139"/>
+    <rect x="978" y="442" width="142" height="52" rx="16" fill="#10141A" stroke="#2B3139"/>
     <text x="1049" y="474" fill="#F4F5F7" font-size="15" text-anchor="middle" font-family="Courier New, Menlo, monospace">COMMUNITY</text>
   </g>
 </svg>

@@ -34,7 +34,8 @@
   <a href="#локальный-запуск">Локальный запуск</a> ·
   <a href="#сборка-релизов">Сборка релизов</a> ·
   <a href="#безопасность">Безопасность</a> ·
-  <a href="#лицензия">Лицензия</a>
+  <a href="#лицензия">Лицензия</a> ·
+  <a href="#дизайн-система">UI система</a>
 </p>
 
 ## Обзор
@@ -224,6 +225,7 @@ git push origin v0.2.0
 | `assets/` | визуальные assets, включая GitHub-баннер |
 | `scripts/` | сборка, очистка и генерация иконок |
 | `tests/` | локальные unit-тесты |
+| `STYLEGUIDE.md` | общая дизайн-система проекта |
 
 ## Документы сообщества
 
@@ -263,3 +265,7 @@ python3 -m unittest discover -s tests -v
 ## Лицензия
 
 Проект распространяется по лицензии `MIT`. Подробности: [LICENSE](LICENSE).
+
+## Дизайн-система
+
+Визуальные правила проекта собраны в [STYLEGUIDE.md](STYLEGUIDE.md). Там зафиксированы color tokens, typography scale, spacing, radius, elevation и правила для buttons, inputs, chips, cards и GitHub-витрины.
