@@ -1,0 +1,74 @@
+name: Bug report
+description: Сообщить о проблеме в приложении, релизе или документации
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчет. Пожалуйста, опишите проблему как можно конкретнее.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Кратко
+      description: Одним предложением, что сломалось?
+      placeholder: После подключения диска приложение не переключается на VantaVault
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Что нужно сделать, чтобы увидеть проблему?
+      placeholder: |
+        1. Запустить приложение
+        2. Подключить внешний диск
+        3. Открыть vault
+        4. Увидеть ошибку
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+      placeholder: Приложение должно автоматически увидеть диск и предложить открыть его
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое поведение
+      placeholder: Статус остается disconnected, хотя диск уже смонтирован
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Платформа
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Multiple
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия
+      description: Номер релиза или commit, если известно
+      placeholder: v0.2.0
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или скриншоты
+      description: Добавьте логи, trace, скриншоты или дополнительные детали
+      render: text

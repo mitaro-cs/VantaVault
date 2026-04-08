@@ -1,94 +1,121 @@
 <svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="84" y1="54" x2="1180" y2="606" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#060607"/>
-      <stop offset="0.45" stop-color="#0D1014"/>
-      <stop offset="1" stop-color="#050608"/>
+    <linearGradient id="pageBg" x1="140" y1="64" x2="1128" y2="608" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08090B"/>
+      <stop offset="0.48" stop-color="#0B0D11"/>
+      <stop offset="1" stop-color="#060709"/>
     </linearGradient>
-    <radialGradient id="mistA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(236 136) rotate(20.9417) scale(356.214 234.983)">
-      <stop stop-color="#9AA3AE" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#9AA3AE" stop-opacity="0"/>
+    <linearGradient id="boardBg" x1="72" y1="54" x2="1220" y2="588" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111317"/>
+      <stop offset="1" stop-color="#0B0D11"/>
+    </linearGradient>
+    <linearGradient id="panelBg" x1="780" y1="150" x2="1110" y2="494" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12161C"/>
+      <stop offset="1" stop-color="#0C0F14"/>
+    </linearGradient>
+    <linearGradient id="lineStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="previewGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1018 316) rotate(145.87) scale(154.36 137.7)">
+      <stop stop-color="#F4C8B4" stop-opacity="0.9"/>
+      <stop offset="0.46" stop-color="#9BC7FF" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#9BC7FF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="mistB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1026 150) rotate(152.363) scale(302.828 235.723)">
-      <stop stop-color="#E8ECF1" stop-opacity="0.13"/>
-      <stop offset="1" stop-color="#E8ECF1" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="panel" x1="728" y1="114" x2="1112" y2="506" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#11141A"/>
-      <stop offset="1" stop-color="#0B0D12"/>
-    </linearGradient>
-    <linearGradient id="track" x1="776" y1="270" x2="1068" y2="270" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8D949D"/>
-      <stop offset="1" stop-color="#E9EDF2"/>
-    </linearGradient>
-    <filter id="softBlur" x="680" y="92" width="490" height="450" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="28"/>
+    <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.1" fill="#F3F4F6" opacity="0.08"/>
+    </pattern>
+    <filter id="shadow" x="20" y="30" width="1240" height="580" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000000" flood-opacity="0.38"/>
     </filter>
-    <clipPath id="leftClip">
-      <rect x="118" y="94" width="540" height="470" rx="0"/>
+    <clipPath id="boardClip">
+      <rect x="40" y="40" width="1200" height="560" rx="34"/>
     </clipPath>
-    <clipPath id="panelClip">
-      <rect x="728" y="114" width="384" height="392" rx="30"/>
+    <clipPath id="previewClip">
+      <rect x="760" y="140" width="340" height="360" rx="28"/>
     </clipPath>
   </defs>
 
-  <rect width="1280" height="640" rx="38" fill="url(#bg)"/>
-  <rect width="1280" height="640" rx="38" fill="url(#mistA)"/>
-  <rect width="1280" height="640" rx="38" fill="url(#mistB)"/>
+  <rect width="1280" height="640" fill="url(#pageBg)"/>
 
-  <g opacity="0.18">
-    <path d="M118 110H610" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 150H610" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 190H610" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 230H610" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 270H610" stroke="#F3F5F7" stroke-width="1.2"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#boardBg)"/>
   </g>
 
-  <g clip-path="url(#leftClip)">
-    <text x="118" y="125" fill="#9DA6B0" font-size="17" font-family="Courier New, Menlo, monospace" letter-spacing="6">PRIVATE DISK VAULT</text>
-    <text x="118" y="238" fill="#F2F4F7" font-size="84" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="520" lengthAdjust="spacingAndGlyphs">VantaVault</text>
+  <g clip-path="url(#boardClip)">
+    <rect x="40" y="40" width="1200" height="560" rx="34" fill="url(#dots)"/>
 
-    <text x="118" y="304" fill="#C9D0D7" font-size="27" font-weight="600" font-family="Arial, Helvetica, sans-serif" textLength="510" lengthAdjust="spacingAndGlyphs">Локальный desktop-vault для внешнего диска.</text>
-    <text x="118" y="346" fill="#C9D0D7" font-size="27" font-weight="600" font-family="Arial, Helvetica, sans-serif" textLength="522" lengthAdjust="spacingAndGlyphs">Автопоиск, lockout, AES-архивы и recovery-поток.</text>
+    <rect x="86" y="86" width="90" height="32" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="113" y="106" fill="#F4F5F7" font-size="12" font-family="Arial, Helvetica, sans-serif">Open Repo</text>
 
-    <rect x="118" y="392" width="168" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="152" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
+    <rect x="188" y="86" width="80" height="32" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="217" y="106" fill="#B5BDC8" font-size="12" font-family="Arial, Helvetica, sans-serif">Users</text>
 
-    <rect x="304" y="392" width="138" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="344" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AES ZIP</text>
+    <rect x="280" y="86" width="96" height="32" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="309" y="106" fill="#B5BDC8" font-size="12" font-family="Arial, Helvetica, sans-serif">Releases</text>
 
-    <rect x="460" y="392" width="176" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="501" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
+    <rect x="864" y="86" width="86" height="32" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="894" y="106" fill="#F4F5F7" font-size="12" font-family="Arial, Helvetica, sans-serif">MIT</text>
 
-    <text x="118" y="506" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="432" lengthAdjust="spacingAndGlyphs">Настройки по умолчанию</text>
-    <text x="118" y="544" fill="#A7B0BA" font-size="22" font-family="Arial, Helvetica, sans-serif" textLength="500" lengthAdjust="spacingAndGlyphs">Целевой диск · Finder / Explorer · Recovery-архив</text>
-  </g>
+    <rect x="964" y="86" width="106" height="32" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="994" y="106" fill="#F4F5F7" font-size="12" font-family="Arial, Helvetica, sans-serif">Share</text>
 
-  <g filter="url(#softBlur)" opacity="0.24">
-    <rect x="728" y="122" width="384" height="384" rx="30" fill="#C1CAD4"/>
-  </g>
+    <rect x="1082" y="86" width="118" height="32" rx="9" fill="#F4F5F7"/>
+    <text x="1112" y="106" fill="#0B0D11" font-size="12" font-weight="700" font-family="Arial, Helvetica, sans-serif">Make Public</text>
 
-  <g clip-path="url(#panelClip)">
-    <rect x="728" y="114" width="384" height="392" rx="30" fill="url(#panel)" stroke="#2D343D"/>
+    <text x="112" y="176" fill="#8E97A3" font-size="16" letter-spacing="5" font-family="Courier New, Menlo, monospace">PRIVATE DISK VAULT</text>
 
-    <rect x="760" y="148" width="320" height="58" rx="19" fill="#0C1016" stroke="#2A313A"/>
-    <circle cx="804" cy="177" r="11" fill="#F2F4F7"/>
-    <text x="834" y="187" fill="#F2F4F7" font-size="22" font-weight="600" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
+    <text x="112" y="268" fill="#F4F5F7" font-size="86" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="478" lengthAdjust="spacingAndGlyphs">VantaVault</text>
 
-    <rect x="760" y="228" width="320" height="124" rx="24" fill="#0E1218" stroke="#2A313A"/>
-    <path d="M790 270H1048" stroke="url(#track)" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="988" cy="270" r="18" fill="#E7EBF0"/>
-    <text x="790" y="314" fill="#919AA5" font-size="17" font-family="Courier New, Menlo, monospace">TARGET DISK</text>
-    <text x="790" y="342" fill="#F2F4F7" font-size="23" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="256" lengthAdjust="spacingAndGlyphs">VantaVault / Mounted / Ready</text>
+    <text x="112" y="334" fill="#D3D8E0" font-size="28" font-weight="600" font-family="Arial, Helvetica, sans-serif" textLength="520" lengthAdjust="spacingAndGlyphs">Open-source desktop vault for removable drives.</text>
+    <text x="112" y="374" fill="#A8B0BB" font-size="26" font-family="Arial, Helvetica, sans-serif" textLength="516" lengthAdjust="spacingAndGlyphs">Auto-detect, lockout, AES archive, releases and docs.</text>
 
-    <rect x="760" y="380" width="150" height="104" rx="20" fill="#0C1016" stroke="#2A313A"/>
-    <text x="782" y="408" fill="#919AA5" font-size="15" font-family="Courier New, Menlo, monospace">LOGIN GUARD</text>
-    <text x="782" y="444" fill="#F2F4F7" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">5 attempts</text>
-    <text x="782" y="468" fill="#B6BEC7" font-size="14" font-family="Arial, Helvetica, sans-serif">temporary lockout</text>
+    <rect x="112" y="430" width="170" height="46" rx="23" fill="#151920" stroke="#2F353F"/>
+    <text x="150" y="459" fill="#F4F5F7" font-size="16" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
 
-    <rect x="930" y="380" width="150" height="104" rx="20" fill="#0C1016" stroke="#2A313A"/>
-    <text x="952" y="408" fill="#919AA5" font-size="15" font-family="Courier New, Menlo, monospace">AES BACKUP</text>
-    <text x="952" y="444" fill="#F2F4F7" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">256-bit</text>
-    <text x="952" y="468" fill="#B6BEC7" font-size="14" font-family="Arial, Helvetica, sans-serif">local archive flow</text>
+    <rect x="296" y="430" width="146" height="46" rx="23" fill="#151920" stroke="#2F353F"/>
+    <text x="336" y="459" fill="#F4F5F7" font-size="16" font-family="Courier New, Menlo, monospace">AES ZIP</text>
+
+    <rect x="456" y="430" width="182" height="46" rx="23" fill="#151920" stroke="#2F353F"/>
+    <text x="498" y="459" fill="#F4F5F7" font-size="16" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
+
+    <text x="112" y="538" fill="#F4F5F7" font-size="38" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="372" lengthAdjust="spacingAndGlyphs">Built for users and contributors</text>
+    <text x="112" y="572" fill="#939CA8" font-size="22" font-family="Arial, Helvetica, sans-serif" textLength="464" lengthAdjust="spacingAndGlyphs">Issues · Releases · Docs · Cross-platform builds</text>
+
+    <path d="M642 322C678 322 690 258 732 258" stroke="url(#lineStroke)" stroke-width="2"/>
+    <path d="M642 452C686 452 692 438 732 438" stroke="url(#lineStroke)" stroke-width="2"/>
+
+    <rect x="560" y="222" width="128" height="96" rx="18" fill="#13171D" stroke="#2C3139"/>
+    <text x="580" y="246" fill="#8E97A3" font-size="12" font-family="Courier New, Menlo, monospace">PROMPT</text>
+    <text x="580" y="276" fill="#F4F5F7" font-size="18" font-weight="700" font-family="Arial, Helvetica, sans-serif">Disk Detect</text>
+    <text x="580" y="302" fill="#AAB2BC" font-size="13" font-family="Arial, Helvetica, sans-serif">watch mounted volume</text>
+
+    <rect x="560" y="390" width="128" height="96" rx="18" fill="#13171D" stroke="#2C3139"/>
+    <text x="580" y="414" fill="#8E97A3" font-size="12" font-family="Courier New, Menlo, monospace">SECURE</text>
+    <text x="580" y="444" fill="#F4F5F7" font-size="18" font-weight="700" font-family="Arial, Helvetica, sans-serif">Vault Rules</text>
+    <text x="580" y="470" fill="#AAB2BC" font-size="13" font-family="Arial, Helvetica, sans-serif">lockout and AES flow</text>
+
+    <g clip-path="url(#previewClip)">
+      <rect x="760" y="140" width="340" height="360" rx="28" fill="url(#panelBg)" stroke="#2E343D"/>
+      <rect x="790" y="178" width="280" height="62" rx="20" fill="#10141A" stroke="#2C3139"/>
+      <circle cx="830" cy="209" r="11" fill="#F4F5F7"/>
+      <text x="858" y="219" fill="#F4F5F7" font-size="21" font-weight="600" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
+
+      <rect x="790" y="262" width="280" height="146" rx="24" fill="#10141A" stroke="#2C3139"/>
+      <text x="822" y="294" fill="#8E97A3" font-size="12" font-family="Courier New, Menlo, monospace">OPEN SOURCE STATE</text>
+      <path d="M822 332H1038" stroke="#DDE2E8" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="984" cy="332" r="17" fill="#F4F5F7"/>
+      <text x="822" y="374" fill="#F4F5F7" font-size="27" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="214" lengthAdjust="spacingAndGlyphs">Ready for Releases</text>
+
+      <rect x="790" y="430" width="132" height="48" rx="16" fill="#10141A" stroke="#2C3139"/>
+      <text x="822" y="460" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">EXE + DMG</text>
+
+      <rect x="938" y="430" width="132" height="48" rx="16" fill="#10141A" stroke="#2C3139"/>
+      <text x="970" y="460" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">COMMUNITY</text>
+
+      <rect x="922" y="214" width="112" height="168" rx="18" fill="#0E1218" stroke="#323842"/>
+      <rect x="940" y="232" width="76" height="100" rx="14" fill="url(#previewGlow)"/>
+      <text x="946" y="356" fill="#B5BDC8" font-size="11" font-family="Arial, Helvetica, sans-serif">preview panel</text>
+    </g>
   </g>
 </svg>

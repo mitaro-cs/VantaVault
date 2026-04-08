@@ -17,6 +17,8 @@
   <a href="https://github.com/mitaro-cs/VantaVault/releases/latest">
     <img alt="Download" src="https://img.shields.io/badge/Download-Releases-F3F4F6?style=for-the-badge&labelColor=111111">
   </a>
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-F3F4F6?style=for-the-badge&labelColor=111111">
+  <img alt="Contributions Welcome" src="https://img.shields.io/badge/Contributions-Welcome-F3F4F6?style=for-the-badge&labelColor=111111">
   <img alt="macOS" src="https://img.shields.io/badge/macOS-supported-F3F4F6?style=for-the-badge&logo=apple&logoColor=111111&labelColor=111111">
   <img alt="Windows" src="https://img.shields.io/badge/Windows-supported-F3F4F6?style=for-the-badge&logo=windows&logoColor=111111&labelColor=111111">
   <img alt="pywebview" src="https://img.shields.io/badge/pywebview-desktop%20shell-F3F4F6?style=for-the-badge&labelColor=111111">
@@ -27,9 +29,12 @@
   <a href="#обзор">Обзор</a> ·
   <a href="#ключевые-сценарии">Ключевые сценарии</a> ·
   <a href="#скачать">Скачать</a> ·
+  <a href="#для-открытого-репозитория">Open Source</a> ·
+  <a href="#как-помочь">Как помочь</a> ·
   <a href="#локальный-запуск">Локальный запуск</a> ·
   <a href="#сборка-релизов">Сборка релизов</a> ·
-  <a href="#безопасность">Безопасность</a>
+  <a href="#безопасность">Безопасность</a> ·
+  <a href="#лицензия">Лицензия</a>
 </p>
 
 ## Обзор
@@ -109,6 +114,34 @@ AES-архивирование прямо в рабочий интерфейс.
 - человек сразу видит номер версии;
 - `macOS` и `Windows` лежат рядом в одном релизе;
 - имя файла уже объясняет, что именно скачивается.
+
+## Для открытого репозитория
+
+`VantaVault` теперь оформлен не только как приложение, но и как публичный GitHub-репозиторий, которым удобно пользоваться и в который удобно контрибьютить.
+
+- есть `MIT`-лицензия для свободного использования;
+- есть versioned releases с готовыми `dmg` и `exe`;
+- есть шаблоны для багов, feature request и `pull request`;
+- есть отдельные документы для вклада в проект, безопасности и правил сообщества;
+- GitHub-витрина оформлена как продуктовая landing-страница, а не как сырой список файлов.
+
+## Как помочь
+
+Если хочешь внести вклад:
+
+1. открой `issue`, если изменение крупное или спорное;
+2. форкни репозиторий и сделай отдельную ветку;
+3. внеси изменение и прогони локальные проверки;
+4. открой `pull request` с понятным описанием и, если нужно, со скриншотами.
+
+Быстрые ссылки:
+
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [SECURITY.md](SECURITY.md)
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- [.github/ISSUE_TEMPLATE/bug_report.yml](.github/ISSUE_TEMPLATE/bug_report.yml)
+- [.github/ISSUE_TEMPLATE/feature_request.yml](.github/ISSUE_TEMPLATE/feature_request.yml)
+- [.github/pull_request_template.md](.github/pull_request_template.md)
 
 ## Локальный запуск
 
@@ -192,6 +225,16 @@ git push origin v0.2.0
 | `scripts/` | сборка, очистка и генерация иконок |
 | `tests/` | локальные unit-тесты |
 
+## Документы сообщества
+
+| Файл | Назначение |
+| --- | --- |
+| `CONTRIBUTING.md` | правила для участников и checklist для изменений |
+| `SECURITY.md` | как сообщать о проблемах безопасности |
+| `CODE_OF_CONDUCT.md` | базовые правила общения в проекте |
+| `.github/ISSUE_TEMPLATE/` | шаблоны багов и feature request |
+| `.github/pull_request_template.md` | структура для входящих `PR` |
+
 ## Безопасность
 
 - пароль хранится локально в виде `PBKDF2-SHA256` хеша;
@@ -200,6 +243,8 @@ git push origin v0.2.0
 - автоматическое стирание данных не используется;
 - AES-архивы шифруются локально и не требуют внешнего сервиса;
 - приложение ничего не отправляет в интернет.
+
+Открытые security-issues не должны содержать exploit-детали. Для этого есть отдельный документ: [SECURITY.md](SECURITY.md).
 
 ## Проверка
 
@@ -214,3 +259,7 @@ python3 -m unittest discover -s tests -v
 
 Проект уже выглядит как рабочий desktop-vault, а не как сырой прототип: есть локальная защита,
 автодетект внешнего диска, recovery-поток и витринное оформление для GitHub-страницы репозитория.
+
+## Лицензия
+
+Проект распространяется по лицензии `MIT`. Подробности: [LICENSE](LICENSE).

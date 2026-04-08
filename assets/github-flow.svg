@@ -1,81 +1,104 @@
 <svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="flowBg" x1="88" y1="62" x2="1186" y2="516" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#060607"/>
-      <stop offset="0.5" stop-color="#0E1116"/>
-      <stop offset="1" stop-color="#050608"/>
+    <linearGradient id="bg" x1="96" y1="58" x2="1184" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090A0C"/>
+      <stop offset="0.52" stop-color="#0E1014"/>
+      <stop offset="1" stop-color="#08090B"/>
     </linearGradient>
-    <linearGradient id="flowLine" x1="172" y1="282" x2="1110" y2="282" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#9098A2"/>
-      <stop offset="0.52" stop-color="#F1F4F7"/>
-      <stop offset="1" stop-color="#8A929C"/>
+    <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.05" fill="#F3F4F6" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="connector" x1="198" y1="286" x2="1080" y2="286" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#707985"/>
+      <stop offset="0.5" stop-color="#EEF1F5"/>
+      <stop offset="1" stop-color="#707985"/>
     </linearGradient>
-    <clipPath id="card01">
-      <rect x="90" y="128" width="256" height="304" rx="26"/>
+    <clipPath id="canvasClip">
+      <rect x="40" y="40" width="1200" height="480" rx="30"/>
     </clipPath>
-    <clipPath id="card02">
-      <rect x="378" y="128" width="256" height="304" rx="26"/>
+    <clipPath id="cardA">
+      <rect x="104" y="160" width="246" height="266" rx="24"/>
     </clipPath>
-    <clipPath id="card03">
-      <rect x="666" y="128" width="256" height="304" rx="26"/>
+    <clipPath id="cardB">
+      <rect x="384" y="160" width="246" height="266" rx="24"/>
     </clipPath>
-    <clipPath id="card04">
-      <rect x="954" y="128" width="236" height="304" rx="26"/>
+    <clipPath id="cardC">
+      <rect x="664" y="160" width="246" height="266" rx="24"/>
+    </clipPath>
+    <clipPath id="cardD">
+      <rect x="944" y="160" width="232" height="266" rx="24"/>
     </clipPath>
   </defs>
 
-  <rect width="1280" height="560" rx="30" fill="url(#flowBg)"/>
-  <path d="M172 282H1110" stroke="url(#flowLine)" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18"/>
+  <rect width="1280" height="560" fill="#050608"/>
+  <rect x="40" y="40" width="1200" height="480" rx="30" fill="url(#bg)"/>
 
-  <g clip-path="url(#card01)">
-    <rect x="90" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
-    <text x="122" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">01 / DETECT</text>
-    <text x="122" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="206" lengthAdjust="spacingAndGlyphs">Внешний диск</text>
-    <text x="122" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="190" lengthAdjust="spacingAndGlyphs">Приложение следит за</text>
-    <text x="122" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">целевым диском и</text>
-    <text x="122" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="200" lengthAdjust="spacingAndGlyphs">понимает, когда он</text>
-    <text x="122" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="199" lengthAdjust="spacingAndGlyphs">появился или исчез.</text>
-    <rect x="122" y="382" width="136" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="158" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">watch mount</text>
-    <circle cx="312" cy="388" r="16" fill="#E8EBEF"/>
-  </g>
+  <g clip-path="url(#canvasClip)">
+    <rect x="40" y="40" width="1200" height="480" rx="30" fill="url(#dots)"/>
 
-  <g clip-path="url(#card02)">
-    <rect x="378" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
-    <text x="410" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">02 / UNLOCK</text>
-    <text x="410" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="216" lengthAdjust="spacingAndGlyphs">Локальная защита</text>
-    <text x="410" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="208" lengthAdjust="spacingAndGlyphs">PBKDF2-пароль и</text>
-    <text x="410" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="204" lengthAdjust="spacingAndGlyphs">cookie-сессия. После</text>
-    <text x="410" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="194" lengthAdjust="spacingAndGlyphs">ошибок включается</text>
-    <text x="410" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="181" lengthAdjust="spacingAndGlyphs">временный lockout.</text>
-    <rect x="410" y="382" width="170" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="435" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">safe lockout mode</text>
-    <circle cx="600" cy="388" r="16" fill="#E8EBEF"/>
-  </g>
+    <rect x="88" y="92" width="90" height="30" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="117" y="111" fill="#F4F5F7" font-size="12" font-family="Arial, Helvetica, sans-serif">Workflow</text>
 
-  <g clip-path="url(#card03)">
-    <rect x="666" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
-    <text x="698" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">03 / ENCRYPT</text>
-    <text x="698" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">AES-архивы</text>
-    <text x="698" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">Файлы и папки можно</text>
-    <text x="698" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="177" lengthAdjust="spacingAndGlyphs">зашифровать и</text>
-    <text x="698" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="202" lengthAdjust="spacingAndGlyphs">восстановить в том же</text>
-    <text x="698" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="55" lengthAdjust="spacingAndGlyphs">vault.</text>
-    <rect x="698" y="382" width="138" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="733" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">aes archive</text>
-    <circle cx="888" cy="388" r="16" fill="#E8EBEF"/>
-  </g>
+    <rect x="190" y="92" width="78" height="30" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="219" y="111" fill="#B5BDC8" font-size="12" font-family="Arial, Helvetica, sans-serif">Docs</text>
 
-  <g clip-path="url(#card04)">
-    <rect x="954" y="128" width="236" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
-    <text x="986" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">04 / RECOVER</text>
-    <text x="986" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="189" lengthAdjust="spacingAndGlyphs">Recovery flow</text>
-    <text x="986" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="184" lengthAdjust="spacingAndGlyphs">Настройки по</text>
-    <text x="986" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="198" lengthAdjust="spacingAndGlyphs">умолчанию и archive</text>
-    <text x="986" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="187" lengthAdjust="spacingAndGlyphs">делают рабочий диск</text>
-    <text x="986" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="164" lengthAdjust="spacingAndGlyphs">предсказуемым.</text>
-    <rect x="986" y="382" width="104" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="1016" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">ready</text>
-    <circle cx="1158" cy="388" r="16" fill="#E8EBEF"/>
+    <rect x="280" y="92" width="86" height="30" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="309" y="111" fill="#B5BDC8" font-size="12" font-family="Arial, Helvetica, sans-serif">Issues</text>
+
+    <rect x="938" y="92" width="82" height="30" rx="9" fill="#171A20" stroke="#2B3038"/>
+    <text x="965" y="111" fill="#F4F5F7" font-size="12" font-family="Arial, Helvetica, sans-serif">Share</text>
+
+    <rect x="1032" y="92" width="128" height="30" rx="9" fill="#F4F5F7"/>
+    <text x="1061" y="111" fill="#0C0E12" font-size="12" font-weight="700" font-family="Arial, Helvetica, sans-serif">Contribute</text>
+
+    <path d="M198 292H1080" stroke="url(#connector)" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 16"/>
+
+    <g clip-path="url(#cardA)">
+      <rect x="104" y="160" width="246" height="266" rx="24" fill="#12151B" stroke="#2B3038"/>
+      <text x="132" y="204" fill="#8E97A3" font-size="16" font-family="Courier New, Menlo, monospace">01 / INSTALL</text>
+      <text x="132" y="252" fill="#F4F5F7" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="174" lengthAdjust="spacingAndGlyphs">Get the app</text>
+      <text x="132" y="296" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="176" lengthAdjust="spacingAndGlyphs">Users download DMG</text>
+      <text x="132" y="324" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="185" lengthAdjust="spacingAndGlyphs">or EXE from Releases</text>
+      <text x="132" y="352" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="170" lengthAdjust="spacingAndGlyphs">and start the vault.</text>
+      <rect x="132" y="372" width="118" height="40" rx="20" fill="#0E1116" stroke="#313842"/>
+      <text x="165" y="397" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">release</text>
+      <circle cx="312" cy="382" r="16" fill="#F1F4F7"/>
+    </g>
+
+    <g clip-path="url(#cardB)">
+      <rect x="384" y="160" width="246" height="266" rx="24" fill="#12151B" stroke="#2B3038"/>
+      <text x="412" y="204" fill="#8E97A3" font-size="16" font-family="Courier New, Menlo, monospace">02 / CONNECT</text>
+      <text x="412" y="252" fill="#F4F5F7" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="186" lengthAdjust="spacingAndGlyphs">Detect disk</text>
+      <text x="412" y="296" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="176" lengthAdjust="spacingAndGlyphs">The app tracks the</text>
+      <text x="412" y="324" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="184" lengthAdjust="spacingAndGlyphs">target removable drive</text>
+      <text x="412" y="352" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="188" lengthAdjust="spacingAndGlyphs">and opens the workspace.</text>
+      <rect x="412" y="372" width="126" height="40" rx="20" fill="#0E1116" stroke="#313842"/>
+      <text x="444" y="397" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">mount</text>
+      <circle cx="592" cy="382" r="16" fill="#F1F4F7"/>
+    </g>
+
+    <g clip-path="url(#cardC)">
+      <rect x="664" y="160" width="246" height="266" rx="24" fill="#12151B" stroke="#2B3038"/>
+      <text x="692" y="204" fill="#8E97A3" font-size="16" font-family="Courier New, Menlo, monospace">03 / PROTECT</text>
+      <text x="692" y="252" fill="#F4F5F7" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="192" lengthAdjust="spacingAndGlyphs">Lock and AES</text>
+      <text x="692" y="296" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="184" lengthAdjust="spacingAndGlyphs">PBKDF2, session guard,</text>
+      <text x="692" y="324" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="177" lengthAdjust="spacingAndGlyphs">temporary lockout and</text>
+      <text x="692" y="352" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="164" lengthAdjust="spacingAndGlyphs">encrypted archives.</text>
+      <rect x="692" y="372" width="136" height="40" rx="20" fill="#0E1116" stroke="#313842"/>
+      <text x="726" y="397" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">secure</text>
+      <circle cx="872" cy="382" r="16" fill="#F1F4F7"/>
+    </g>
+
+    <g clip-path="url(#cardD)">
+      <rect x="944" y="160" width="232" height="266" rx="24" fill="#12151B" stroke="#2B3038"/>
+      <text x="972" y="204" fill="#8E97A3" font-size="16" font-family="Courier New, Menlo, monospace">04 / GROW</text>
+      <text x="972" y="252" fill="#F4F5F7" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="158" lengthAdjust="spacingAndGlyphs">Open source</text>
+      <text x="972" y="296" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="172" lengthAdjust="spacingAndGlyphs">Community can use,</text>
+      <text x="972" y="324" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="164" lengthAdjust="spacingAndGlyphs">report issues and send</text>
+      <text x="972" y="352" fill="#C9D0D8" font-size="19" font-family="Arial, Helvetica, sans-serif" textLength="132" lengthAdjust="spacingAndGlyphs">pull requests.</text>
+      <rect x="972" y="372" width="112" height="40" rx="20" fill="#0E1116" stroke="#313842"/>
+      <text x="1006" y="397" fill="#F4F5F7" font-size="15" font-family="Courier New, Menlo, monospace">public</text>
+      <circle cx="1142" cy="382" r="16" fill="#F1F4F7"/>
+    </g>
   </g>
 </svg>

@@ -1,0 +1,56 @@
+name: Feature request
+description: Предложить новую возможность или улучшение UX
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите идею так, чтобы было понятно, какую задачу она решает для пользователя.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Кратко
+      description: Как называется идея?
+      placeholder: Добавить onboarding для первого подключения диска
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему это решает
+      placeholder: Пользователь не понимает, какой диск нужно выбрать в первый запуск
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+      placeholder: Добавить мастер первого запуска с выбором целевого диска и параметров по умолчанию
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Есть ли другой путь решить эту же проблему?
+      placeholder: Можно ограничиться подсказкой в настройках, но полноценный onboarding понятнее
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область
+      options:
+        - Desktop app
+        - Web UI
+        - Encryption / archives
+        - Release / packaging
+        - Docs / GitHub
+        - Other
+    validations:
+      required: true
