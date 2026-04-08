@@ -5,8 +5,8 @@
 <h1 align="center">VantaVault</h1>
 
 <p align="center">
-  <strong>A calm desktop vault for removable drives.</strong><br>
-  Local access, preferred disk detection, and encrypted archive flow in one clean workspace.
+  <strong>A premium desktop vault for removable drives.</strong><br>
+  Quiet local access, preferred disk awareness, and encrypted archive flow in one deliberate workspace.
 </p>
 
 <p align="center">
@@ -17,6 +17,7 @@
     <img alt="Download" src="https://img.shields.io/badge/Download-Releases-F5F5F7?style=for-the-badge&labelColor=111111">
   </a>
   <img alt="License" src="https://img.shields.io/badge/License-MIT-F5F5F7?style=for-the-badge&labelColor=111111">
+  <img alt="macOS / Windows" src="https://img.shields.io/badge/macOS%20%2F%20Windows-supported-F5F5F7?style=for-the-badge&labelColor=111111">
 </p>
 
 <p align="center">
@@ -29,12 +30,25 @@
 
 ## Overview
 
-`VantaVault` is built around one job: making an external drive feel like a polished desktop product.
+`VantaVault` is built for one very specific job: turning an external drive into a calm,
+high-quality desktop workspace.
 
-- detects the preferred removable drive
-- keeps access behind local auth and safe lockout
-- opens a clear workspace for the right volume
-- creates local AES archives without cloud services
+<table>
+  <tr>
+    <td width="33.33%" valign="top">
+      <h3>Disk-aware</h3>
+      <p>Knows when the preferred removable drive is mounted, missing, or ready.</p>
+    </td>
+    <td width="33.33%" valign="top">
+      <h3>Local-first</h3>
+      <p>Keeps access behind local authentication and safe lockout without cloud services.</p>
+    </td>
+    <td width="33.33%" valign="top">
+      <h3>Archive-ready</h3>
+      <p>Creates and restores local AES archives from the same workspace.</p>
+    </td>
+  </tr>
+</table>
 
 ## Download
 
@@ -84,7 +98,6 @@ Or open `main.bat`.
 - local `PBKDF2-SHA256` password storage
 - local session protection
 - temporary lockout on repeated failures
-- no destructive auto-wipe
 - local AES archive creation
 
 See [SECURITY.md](SECURITY.md) for reporting guidance.
