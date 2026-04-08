@@ -1,0 +1,60 @@
+<svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowBg" x1="83" y1="77" x2="1187" y2="523" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1723"/>
+      <stop offset="1" stop-color="#0B1118"/>
+    </linearGradient>
+    <linearGradient id="flowLine" x1="182" y1="281" x2="1098" y2="281" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72C6FF"/>
+      <stop offset="0.48" stop-color="#ECD7B3"/>
+      <stop offset="1" stop-color="#71F0BF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="560" rx="30" fill="url(#flowBg)"/>
+  <path d="M182 281H1098" stroke="url(#flowLine)" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18"/>
+
+  <g>
+    <rect x="90" y="151" width="252" height="260" rx="26" fill="#131D2A" stroke="#24364A"/>
+    <text x="122" y="196" fill="#72C6FF" font-size="18" font-family="IBM Plex Mono, Menlo, monospace">01 / DETECT</text>
+    <text x="122" y="242" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">Внешний диск</text>
+    <text x="122" y="280" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">Приложение следит за целевым</text>
+    <text x="122" y="310" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">диском и понимает, когда он</text>
+    <text x="122" y="340" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">появился или исчез.</text>
+    <circle cx="310" cy="378" r="16" fill="#72C6FF"/>
+  </g>
+
+  <g>
+    <rect x="380" y="117" width="252" height="326" rx="26" fill="#161F2D" stroke="#314157"/>
+    <text x="412" y="162" fill="#ECD7B3" font-size="18" font-family="IBM Plex Mono, Menlo, monospace">02 / UNLOCK</text>
+    <text x="412" y="208" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">Локальная защита</text>
+    <text x="412" y="246" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">PBKDF2-пароль, cookie-сессия</text>
+    <text x="412" y="276" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">и lockout после серии</text>
+    <text x="412" y="306" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">неверных попыток.</text>
+    <rect x="412" y="343" width="190" height="44" rx="22" fill="#201914" stroke="#4A3828"/>
+    <text x="439" y="371" fill="#FFD1B1" font-size="17" font-family="IBM Plex Mono, Menlo, monospace">SAFE, NO AUTO WIPE</text>
+    <circle cx="600" cy="410" r="16" fill="#ECD7B3"/>
+  </g>
+
+  <g>
+    <rect x="670" y="151" width="252" height="260" rx="26" fill="#131D2A" stroke="#24364A"/>
+    <text x="702" y="196" fill="#71F0BF" font-size="18" font-family="IBM Plex Mono, Menlo, monospace">03 / ENCRYPT</text>
+    <text x="702" y="242" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">AES-архивы</text>
+    <text x="702" y="280" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">Файлы и папки можно быстро</text>
+    <text x="702" y="310" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">зашифровать и восстановить</text>
+    <text x="702" y="340" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">прямо из интерфейса.</text>
+    <circle cx="890" cy="378" r="16" fill="#71F0BF"/>
+  </g>
+
+  <g>
+    <rect x="960" y="117" width="230" height="326" rx="26" fill="#161F2D" stroke="#314157"/>
+    <text x="992" y="162" fill="#AFC9FF" font-size="18" font-family="IBM Plex Mono, Menlo, monospace">04 / RECOVER</text>
+    <text x="992" y="208" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">Recovery flow</text>
+    <text x="992" y="246" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">Настройки по умолчанию</text>
+    <text x="992" y="276" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">и recovery-архив делают</text>
+    <text x="992" y="306" fill="#D3DDE8" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">рабочий диск предсказуемым.</text>
+    <rect x="992" y="343" width="128" height="44" rx="22" fill="#15212D" stroke="#274056"/>
+    <text x="1032" y="371" fill="#72C6FF" font-size="17" font-family="IBM Plex Mono, Menlo, monospace">READY</text>
+    <circle cx="1158" cy="410" r="16" fill="#AFC9FF"/>
+  </g>
+</svg>

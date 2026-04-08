@@ -1,0 +1,103 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="74" x2="1116" y2="612" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1520"/>
+      <stop offset="0.48" stop-color="#121C2A"/>
+      <stop offset="1" stop-color="#0A0F16"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(242 126) rotate(25.3984) scale(331.32 234.59)">
+      <stop stop-color="#3A5D87" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#3A5D87" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1092 136) rotate(156.791) scale(279.821 214.864)">
+      <stop stop-color="#D29A64" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#D29A64" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(884 506) rotate(-156.865) scale(412.165 226.012)">
+      <stop stop-color="#5AB992" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#5AB992" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="708" y1="123" x2="1110" y2="516" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#182332" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#101721" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ECD7B3"/>
+      <stop offset="1" stop-color="#D29A64"/>
+    </linearGradient>
+    <linearGradient id="line" x1="734" y1="223" x2="1088" y2="223" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72C6FF"/>
+      <stop offset="1" stop-color="#ECD7B3"/>
+    </linearGradient>
+    <filter id="blur" x="652" y="90" width="490" height="472" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="38" fill="url(#bg)"/>
+  <rect width="1280" height="640" rx="38" fill="url(#glowA)"/>
+  <rect width="1280" height="640" rx="38" fill="url(#glowB)"/>
+  <rect width="1280" height="640" rx="38" fill="url(#glowC)"/>
+
+  <g opacity="0.18">
+    <path d="M106 108H556" stroke="#ECF3F7" stroke-width="1.2"/>
+    <path d="M106 148H556" stroke="#ECF3F7" stroke-width="1.2"/>
+    <path d="M106 188H556" stroke="#ECF3F7" stroke-width="1.2"/>
+    <path d="M106 228H556" stroke="#ECF3F7" stroke-width="1.2"/>
+    <path d="M106 268H556" stroke="#ECF3F7" stroke-width="1.2"/>
+  </g>
+
+  <g opacity="0.84">
+    <text x="106" y="122" fill="#9CA9B8" font-size="18" font-family="IBM Plex Mono, Menlo, monospace" letter-spacing="6">PRIVATE DISK VAULT</text>
+    <text x="106" y="224" fill="#EEF3F7" font-size="92" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">VantaVault</text>
+    <text x="106" y="278" fill="#D6DEE8" font-size="28" font-family="Avenir Next, Trebuchet MS, sans-serif">
+      Локальный desktop-vault для внешнего диска:
+    </text>
+    <text x="106" y="317" fill="#D6DEE8" font-size="28" font-family="Avenir Next, Trebuchet MS, sans-serif">
+      автопоиск, lockout, AES-архивы и recovery-поток.
+    </text>
+  </g>
+
+  <g>
+    <rect x="106" y="380" width="174" height="42" rx="21" fill="#162230" stroke="#28384D"/>
+    <text x="141" y="407" fill="#72C6FF" font-size="16" font-family="IBM Plex Mono, Menlo, monospace">AUTO DETECT</text>
+
+    <rect x="294" y="380" width="142" height="42" rx="21" fill="#1A2430" stroke="#3E3326"/>
+    <text x="337" y="407" fill="#ECD7B3" font-size="16" font-family="IBM Plex Mono, Menlo, monospace">AES ZIP</text>
+
+    <rect x="450" y="380" width="174" height="42" rx="21" fill="#16251F" stroke="#24473A"/>
+    <text x="491" y="407" fill="#71F0BF" font-size="16" font-family="IBM Plex Mono, Menlo, monospace">SAFE LOCKOUT</text>
+  </g>
+
+  <g opacity="0.94">
+    <text x="106" y="492" fill="#EEF3F7" font-size="24" font-family="Avenir Next, Trebuchet MS, sans-serif">Настройки по умолчанию</text>
+    <text x="106" y="529" fill="#A9B5C3" font-size="22" font-family="Avenir Next, Trebuchet MS, sans-serif">Целевой диск · Finder / Explorer · Recovery-архив</text>
+  </g>
+
+  <g filter="url(#blur)" opacity="0.5">
+    <rect x="700" y="138" width="394" height="376" rx="28" fill="#4B6A8D"/>
+  </g>
+
+  <g>
+    <rect x="706" y="116" width="408" height="392" rx="30" fill="url(#card)" stroke="#27364A"/>
+    <rect x="734" y="145" width="352" height="56" rx="18" fill="#101824" stroke="#29384C"/>
+    <circle cx="770" cy="173" r="11" fill="#71F0BF"/>
+    <text x="796" y="180" fill="#EEF3F7" font-size="24" font-family="Avenir Next, Trebuchet MS, sans-serif">VantaVault connected</text>
+
+    <rect x="734" y="223" width="352" height="118" rx="22" fill="#121D2A" stroke="#27364A"/>
+    <path d="M760 264H1060" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="982" cy="264" r="17" fill="url(#accent)"/>
+    <text x="760" y="300" fill="#9CA9B8" font-size="19" font-family="IBM Plex Mono, Menlo, monospace">TARGET DISK</text>
+    <text x="760" y="330" fill="#EEF3F7" font-size="28" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">VantaVault / Mounted / Ready</text>
+
+    <rect x="734" y="361" width="164" height="116" rx="20" fill="#101824" stroke="#27364A"/>
+    <text x="756" y="392" fill="#9CA9B8" font-size="16" font-family="IBM Plex Mono, Menlo, monospace">LOGIN GUARD</text>
+    <text x="756" y="431" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">5 attempts</text>
+    <text x="756" y="458" fill="#FFB2B2" font-size="17" font-family="Avenir Next, Trebuchet MS, sans-serif">then temporary lockout</text>
+
+    <rect x="922" y="361" width="164" height="116" rx="20" fill="#101824" stroke="#27364A"/>
+    <text x="944" y="392" fill="#9CA9B8" font-size="16" font-family="IBM Plex Mono, Menlo, monospace">AES BACKUP</text>
+    <text x="944" y="431" fill="#EEF3F7" font-size="34" font-weight="700" font-family="Avenir Next, Trebuchet MS, sans-serif">256-bit</text>
+    <text x="944" y="458" fill="#ECD7B3" font-size="17" font-family="Avenir Next, Trebuchet MS, sans-serif">local archive flow</text>
+  </g>
+</svg>

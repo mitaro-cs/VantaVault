@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.vantavault_state.json
+.venv*/
+build/
+dist/
+release/
+assets/generated/
+VantaVault.spec
+.DS_Store

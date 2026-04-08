@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <title>VantaVault</title>
+        <link rel="stylesheet" href="/assets/styles.css" />
+    </head>
+    <body>
+        <div class="app-bg" aria-hidden="true"></div>
+
+        <div class="shell">
+            <aside class="sidebar">
+                <div class="brand">
+                    <div class="brand-lockup">
+                        <div class="logo-mark" aria-hidden="true">
+                            <span class="logo-mark-main">V</span>
+                            <span class="logo-mark-sub">Vw</span>
+                        </div>
+                        <div>
+                            <p class="eyebrow">Private disk vault</p>
+                            <h1>VantaVault</h1>
+                        </div>
+                    </div>
+                    <p class="sidebar-copy">
+                        Локальный vault для внешнего диска: автопоиск, настройки по
+                        умолчанию и AES-архивы в одном окне.
+                    </p>
+                </div>
+
+                <section class="panel presence-panel">
+                    <div class="panel-head">
+                        <h2>Статус диска</h2>
+                        <span id="signal-chip" class="signal-chip">Поиск</span>
+                    </div>
+
+                    <div class="presence-card">
+                        <p class="eyebrow">Целевой диск</p>
+                        <h3 id="preferred-volume-name" class="presence-title">
+                            VantaVault
+                        </h3>
+                        <p id="preferred-volume-copy" class="presence-copy">
+                            Проверяю подключение внешнего диска.
+                        </p>
+
+                        <div class="presence-meta">
+                            <div class="meta-chip">
+                                <span>Подключение</span>
+                                <strong id="preferred-connection-note">Ожидание</strong>
+                            </div>
+                            <div class="meta-chip">
+                                <span>Защита</span>
+                                <strong id="security-note">Lockout 5 попыток</strong>
+                            </div>
+                        </div>
+
+                        <div class="presence-actions">
+                            <button
+                                id="focus-preferred-btn"
+                                class="primary-btn"
+                                type="button"
+                            >
+                                Открыть диск
+                            </button>
+                            <button
+                                id="open-settings-side"
+                                class="ghost-btn"
+                                type="button"
+                            >
+                                Настройки
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel disk-panel">
+                    <div class="panel-head">
+                        <h2>Подключенные диски</h2>
+                        <button id="refresh-volumes" class="chip-btn" type="button">
+                            Обновить
+                        </button>
+                    </div>
+                    <div id="volumes-list" class="volume-list"></div>
+                </section>
+
+                <section class="panel side-note">
+                    <h2>Как это работает</h2>
+                    <p>
+                        VantaVault отслеживает подключение целевого диска,
+                        автоматически открывает его в приложении и при необходимости
+                        предлагает подключить устройство к системе.
+                    </p>
+                    <p>
+                        После серии неверных паролей включается безопасная блокировка.
+                        Автостирание данных не используется.
+                    </p>
+                </section>
+            </aside>
+
+            <main class="content">
+                <header class="topbar">
+                    <div>
+                        <p class="eyebrow">VantaVault workspace</p>
+                        <h2>Внешний диск под контролем</h2>
+                    </div>
+                    <div class="topbar-actions">
+                        <button id="open-finder" class="ghost-btn" type="button">
+                            Открыть в Finder
+                        </button>
+                        <button id="open-settings-top" class="ghost-btn" type="button">
+                            Параметры
+                        </button>
+                        <button id="logout-btn" class="ghost-btn" type="button">
+                            Заблокировать
+                        </button>
+                    </div>
+                </header>
+
+                <section class="hero-card">
+                    <div class="hero-copy">
+                        <div class="hero-title-row">
+                            <div>
+                                <p class="eyebrow">Активный диск</p>
+                                <h3 id="hero-volume-name">Нет диска</h3>
+                                <p id="hero-path" class="hero-path">/</p>
+                            </div>
+                            <div id="hero-volume-badge" class="hero-badge">
+                                Ожидание
+                            </div>
+                        </div>
+
+                        <div class="hero-brand-mark" aria-hidden="true">
+                            <span class="logo-mark-main">V</span>
+                            <span class="logo-mark-sub">Vw</span>
+                        </div>
+
+                        <div class="hero-metrics">
+                            <article class="metric">
+                                <span>Объем</span>
+                                <strong id="metric-total">-</strong>
+                            </article>
+                            <article class="metric">
+                                <span>Свободно</span>
+                                <strong id="metric-free">-</strong>
+                            </article>
+                            <article class="metric">
+                                <span>В каталоге</span>
+                                <strong id="metric-items">0</strong>
+                            </article>
+                        </div>
+
+                        <div class="storage-bar">
+                            <div id="storage-used-bar" class="storage-bar-fill"></div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <button id="back-btn" class="chip-btn" type="button">
+                                Назад
+                            </button>
+                            <button id="open-current-btn" class="chip-btn" type="button">
+                                Открыть текущую папку
+                            </button>
+                            <button id="encrypt-current-btn" class="chip-btn" type="button">
+                                AES для папки
+                            </button>
+                            <button id="recovery-backup-btn" class="chip-btn" type="button">
+                                Recovery-архив
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tools-grid">
+                    <article class="panel tool-panel">
+                        <div class="panel-head">
+                            <h2>Защита входа</h2>
+                            <span id="attempt-counter" class="inline-chip">0 / 5</span>
+                        </div>
+                        <p id="security-status-copy" class="tool-copy">
+                            Проверка защитного состояния.
+                        </p>
+                        <div class="tool-meta">
+                            <div class="meta-chip">
+                                <span>Lockout</span>
+                                <strong id="lockout-counter">Не активен</strong>
+                            </div>
+                            <div class="meta-chip">
+                                <span>Режим</span>
+                                <strong>Без автостирания</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel tool-panel">
+                        <div class="panel-head">
+                            <h2>AES-архивы</h2>
+                            <span class="inline-chip">pyzipper AES</span>
+                        </div>
+                        <p id="encryption-status-copy" class="tool-copy">
+                            Создавай шифрованные архивы для папок и файлов прямо из
+                            интерфейса.
+                        </p>
+                        <div class="tool-meta">
+                            <div class="meta-chip">
+                                <span>Быстрый режим</span>
+                                <strong>Текущая папка</strong>
+                            </div>
+                            <div class="meta-chip">
+                                <span>Recovery</span>
+                                <strong>Пароль сейфа</strong>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="browser-panel panel">
+                    <div class="panel-head browser-head">
+                        <div>
+                            <h2>Содержимое</h2>
+                            <div id="breadcrumbs" class="breadcrumbs"></div>
+                        </div>
+
+                        <label class="search-wrap">
+                            <span>Поиск</span>
+                            <input
+                                id="search-input"
+                                type="search"
+                                placeholder="Файлы и папки"
+                            />
+                        </label>
+                    </div>
+
+                    <div id="items-grid" class="items-grid"></div>
+                </section>
+            </main>
+        </div>
+
+        <div id="gate" class="gate">
+            <div class="gate-card">
+                <div class="gate-brand">
+                    <div class="logo-mark gate-logo" aria-hidden="true">
+                        <span class="logo-mark-main">V</span>
+                        <span class="logo-mark-sub">Vw</span>
+                    </div>
+                </div>
+                <p class="eyebrow">Private access</p>
+                <h2 id="gate-title">VantaVault</h2>
+                <p id="gate-copy" class="gate-copy"></p>
+                <form id="auth-form" class="auth-form">
+                    <label>
+                        Пароль
+                        <input
+                            id="password-input"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Введите пароль"
+                            required
+                        />
+                    </label>
+                    <button id="auth-submit" class="primary-btn" type="submit">
+                        Продолжить
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-backdrop" data-close-modal="settings"></div>
+            <div class="modal-card">
+                <div class="panel-head modal-head">
+                    <div>
+                        <p class="eyebrow">Defaults</p>
+                        <h2>Настройки VantaVault</h2>
+                    </div>
+                    <button id="close-settings-btn" class="ghost-btn" type="button">
+                        Закрыть
+                    </button>
+                </div>
+
+                <form id="settings-form" class="settings-form">
+                    <label>
+                        Подключенный диск по умолчанию
+                        <select id="preferred-volume-select"></select>
+                    </label>
+
+                    <label>
+                        Имя целевого диска
+                        <input
+                            id="preferred-volume-name-input"
+                            type="text"
+                            placeholder="Например, VantaVault"
+                        />
+                    </label>
+
+                    <label class="switch-row">
+                        <span>Автоматически открывать диск при подключении</span>
+                        <input id="auto-open-preferred-input" type="checkbox" />
+                    </label>
+
+                    <label class="switch-row">
+                        <span>Показывать уведомление, если диск отсутствует</span>
+                        <input id="notify-missing-preferred-input" type="checkbox" />
+                    </label>
+
+                    <label class="switch-row">
+                        <span>Открывать Finder или Explorer при появлении диска</span>
+                        <input
+                            id="open-in-file-manager-on-connect-input"
+                            type="checkbox"
+                        />
+                    </label>
+
+                    <label>
+                        Лимит неверных попыток
+                        <input
+                            id="failed-attempt-limit-input"
+                            type="number"
+                            min="3"
+                            max="10"
+                        />
+                    </label>
+
+                    <label>
+                        Пауза блокировки, сек
+                        <input
+                            id="lockout-seconds-input"
+                            type="number"
+                            min="60"
+                            max="86400"
+                        />
+                    </label>
+
+                    <label>
+                        Имя AES-архива по умолчанию
+                        <input
+                            id="encryption-default-name-input"
+                            type="text"
+                            placeholder="vault-backup"
+                        />
+                    </label>
+
+                    <div class="modal-actions">
+                        <button class="primary-btn" type="submit">
+                            Сохранить параметры
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="action-modal" class="modal hidden">
+            <div class="modal-backdrop" data-close-modal="action"></div>
+            <div class="modal-card action-card">
+                <div class="panel-head modal-head">
+                    <div>
+                        <p id="action-modal-eyebrow" class="eyebrow">AES archive</p>
+                        <h2 id="action-modal-title">Действие</h2>
+                    </div>
+                    <button id="close-action-btn" class="ghost-btn" type="button">
+                        Закрыть
+                    </button>
+                </div>
+
+                <p id="action-modal-copy" class="modal-copy"></p>
+
+                <form id="action-form" class="settings-form">
+                    <label id="action-name-field">
+                        <span id="action-name-label">Имя</span>
+                        <input id="action-name-input" type="text" />
+                    </label>
+
+                    <label id="action-password-field">
+                        Пароль архива
+                        <input id="action-password-input" type="password" />
+                    </label>
+
+                    <div class="modal-actions">
+                        <button id="action-submit" class="primary-btn" type="submit">
+                            Выполнить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="toast" class="toast" hidden></div>
+
+        <script src="/assets/app.js"></script>
+    </body>
+</html>

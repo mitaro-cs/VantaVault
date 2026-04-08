@@ -1,0 +1,2 @@
+pywebview>=5.4
+pyzipper>=0.3.6
