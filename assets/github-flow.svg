@@ -10,56 +10,72 @@
       <stop offset="0.52" stop-color="#F1F4F7"/>
       <stop offset="1" stop-color="#8A929C"/>
     </linearGradient>
+    <clipPath id="card01">
+      <rect x="90" y="128" width="256" height="304" rx="26"/>
+    </clipPath>
+    <clipPath id="card02">
+      <rect x="378" y="128" width="256" height="304" rx="26"/>
+    </clipPath>
+    <clipPath id="card03">
+      <rect x="666" y="128" width="256" height="304" rx="26"/>
+    </clipPath>
+    <clipPath id="card04">
+      <rect x="954" y="128" width="236" height="304" rx="26"/>
+    </clipPath>
   </defs>
 
   <rect width="1280" height="560" rx="30" fill="url(#flowBg)"/>
   <path d="M172 282H1110" stroke="url(#flowLine)" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 18"/>
 
-  <g>
+  <g clip-path="url(#card01)">
     <rect x="90" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
     <text x="122" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">01 / DETECT</text>
-    <text x="122" y="232" fill="#F2F4F7" font-size="33" font-weight="700" font-family="Georgia, Times New Roman, serif">Внешний диск</text>
-    <text x="122" y="282" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">Приложение следит за целевым</text>
-    <text x="122" y="312" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">диском и понимает, когда он</text>
-    <text x="122" y="342" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">появился или исчез в системе.</text>
-    <rect x="122" y="372" width="132" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="151" y="399" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">watch mount</text>
-    <circle cx="312" cy="394" r="16" fill="#E8EBEF"/>
+    <text x="122" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="206" lengthAdjust="spacingAndGlyphs">Внешний диск</text>
+    <text x="122" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="190" lengthAdjust="spacingAndGlyphs">Приложение следит за</text>
+    <text x="122" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">целевым диском и</text>
+    <text x="122" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="200" lengthAdjust="spacingAndGlyphs">понимает, когда он</text>
+    <text x="122" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="199" lengthAdjust="spacingAndGlyphs">появился или исчез.</text>
+    <rect x="122" y="382" width="136" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
+    <text x="158" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">watch mount</text>
+    <circle cx="312" cy="388" r="16" fill="#E8EBEF"/>
   </g>
 
-  <g>
+  <g clip-path="url(#card02)">
     <rect x="378" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
     <text x="410" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">02 / UNLOCK</text>
-    <text x="410" y="232" fill="#F2F4F7" font-size="33" font-weight="700" font-family="Georgia, Times New Roman, serif">Локальная защита</text>
-    <text x="410" y="282" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">PBKDF2-пароль, cookie-сессия</text>
-    <text x="410" y="312" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">и lockout после серии</text>
-    <text x="410" y="342" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">неверных попыток входа.</text>
-    <rect x="410" y="372" width="170" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="435" y="399" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">safe lockout mode</text>
-    <circle cx="600" cy="394" r="16" fill="#E8EBEF"/>
+    <text x="410" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="216" lengthAdjust="spacingAndGlyphs">Локальная защита</text>
+    <text x="410" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="208" lengthAdjust="spacingAndGlyphs">PBKDF2-пароль и</text>
+    <text x="410" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="204" lengthAdjust="spacingAndGlyphs">cookie-сессия. После</text>
+    <text x="410" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="194" lengthAdjust="spacingAndGlyphs">ошибок включается</text>
+    <text x="410" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="181" lengthAdjust="spacingAndGlyphs">временный lockout.</text>
+    <rect x="410" y="382" width="170" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
+    <text x="435" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">safe lockout mode</text>
+    <circle cx="600" cy="388" r="16" fill="#E8EBEF"/>
   </g>
 
-  <g>
+  <g clip-path="url(#card03)">
     <rect x="666" y="128" width="256" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
     <text x="698" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">03 / ENCRYPT</text>
-    <text x="698" y="232" fill="#F2F4F7" font-size="33" font-weight="700" font-family="Georgia, Times New Roman, serif">AES-архивы</text>
-    <text x="698" y="282" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">Файлы и папки можно быстро</text>
-    <text x="698" y="312" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">зашифровать и затем</text>
-    <text x="698" y="342" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">восстановить в том же vault.</text>
-    <rect x="698" y="372" width="138" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="733" y="399" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">aes archive</text>
-    <circle cx="888" cy="394" r="16" fill="#E8EBEF"/>
+    <text x="698" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">AES-архивы</text>
+    <text x="698" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="196" lengthAdjust="spacingAndGlyphs">Файлы и папки можно</text>
+    <text x="698" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="177" lengthAdjust="spacingAndGlyphs">зашифровать и</text>
+    <text x="698" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="202" lengthAdjust="spacingAndGlyphs">восстановить в том же</text>
+    <text x="698" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="55" lengthAdjust="spacingAndGlyphs">vault.</text>
+    <rect x="698" y="382" width="138" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
+    <text x="733" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">aes archive</text>
+    <circle cx="888" cy="388" r="16" fill="#E8EBEF"/>
   </g>
 
-  <g>
+  <g clip-path="url(#card04)">
     <rect x="954" y="128" width="236" height="304" rx="26" fill="#10141A" stroke="#2A313A"/>
     <text x="986" y="174" fill="#A7B0BA" font-size="18" font-family="Courier New, Menlo, monospace">04 / RECOVER</text>
-    <text x="986" y="232" fill="#F2F4F7" font-size="33" font-weight="700" font-family="Georgia, Times New Roman, serif">Recovery flow</text>
-    <text x="986" y="282" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">Настройки по умолчанию</text>
-    <text x="986" y="312" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">и recovery-архив делают</text>
-    <text x="986" y="342" fill="#C4CBD3" font-size="21" font-family="Segoe UI, Arial, sans-serif">рабочий диск предсказуемым.</text>
-    <rect x="986" y="372" width="104" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
-    <text x="1016" y="399" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">ready</text>
-    <circle cx="1158" cy="394" r="16" fill="#E8EBEF"/>
+    <text x="986" y="230" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="189" lengthAdjust="spacingAndGlyphs">Recovery flow</text>
+    <text x="986" y="280" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="184" lengthAdjust="spacingAndGlyphs">Настройки по</text>
+    <text x="986" y="310" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="198" lengthAdjust="spacingAndGlyphs">умолчанию и archive</text>
+    <text x="986" y="340" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="187" lengthAdjust="spacingAndGlyphs">делают рабочий диск</text>
+    <text x="986" y="370" fill="#C4CBD3" font-size="20" font-family="Arial, Helvetica, sans-serif" textLength="164" lengthAdjust="spacingAndGlyphs">предсказуемым.</text>
+    <rect x="986" y="382" width="104" height="42" rx="21" fill="#0D1117" stroke="#313842"/>
+    <text x="1016" y="409" fill="#F2F4F7" font-size="16" font-family="Courier New, Menlo, monospace">ready</text>
+    <circle cx="1158" cy="388" r="16" fill="#E8EBEF"/>
   </g>
 </svg>

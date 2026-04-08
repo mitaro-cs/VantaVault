@@ -13,83 +13,82 @@
       <stop stop-color="#E8ECF1" stop-opacity="0.13"/>
       <stop offset="1" stop-color="#E8ECF1" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="panel" x1="726" y1="114" x2="1114" y2="512" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panel" x1="728" y1="114" x2="1112" y2="506" gradientUnits="userSpaceOnUse">
       <stop stop-color="#11141A"/>
       <stop offset="1" stop-color="#0B0D12"/>
     </linearGradient>
-    <linearGradient id="track" x1="770" y1="270" x2="1070" y2="270" gradientUnits="userSpaceOnUse">
+    <linearGradient id="track" x1="776" y1="270" x2="1068" y2="270" gradientUnits="userSpaceOnUse">
       <stop stop-color="#8D949D"/>
       <stop offset="1" stop-color="#E9EDF2"/>
     </linearGradient>
-    <filter id="softBlur" x="670" y="92" width="500" height="460" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="softBlur" x="680" y="92" width="490" height="450" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="28"/>
     </filter>
+    <clipPath id="leftClip">
+      <rect x="118" y="94" width="540" height="470" rx="0"/>
+    </clipPath>
+    <clipPath id="panelClip">
+      <rect x="728" y="114" width="384" height="392" rx="30"/>
+    </clipPath>
   </defs>
 
   <rect width="1280" height="640" rx="38" fill="url(#bg)"/>
   <rect width="1280" height="640" rx="38" fill="url(#mistA)"/>
   <rect width="1280" height="640" rx="38" fill="url(#mistB)"/>
 
-  <g opacity="0.2">
-    <path d="M118 110H572" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 150H572" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 190H572" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 230H572" stroke="#F3F5F7" stroke-width="1.2"/>
-    <path d="M118 270H572" stroke="#F3F5F7" stroke-width="1.2"/>
+  <g opacity="0.18">
+    <path d="M118 110H610" stroke="#F3F5F7" stroke-width="1.2"/>
+    <path d="M118 150H610" stroke="#F3F5F7" stroke-width="1.2"/>
+    <path d="M118 190H610" stroke="#F3F5F7" stroke-width="1.2"/>
+    <path d="M118 230H610" stroke="#F3F5F7" stroke-width="1.2"/>
+    <path d="M118 270H610" stroke="#F3F5F7" stroke-width="1.2"/>
   </g>
 
-  <g>
+  <g clip-path="url(#leftClip)">
     <text x="118" y="125" fill="#9DA6B0" font-size="17" font-family="Courier New, Menlo, monospace" letter-spacing="6">PRIVATE DISK VAULT</text>
-    <text x="118" y="240" fill="#F2F4F7" font-size="102" font-weight="700" font-family="Georgia, Times New Roman, serif">VantaVault</text>
-    <text x="118" y="304" fill="#C9D0D7" font-size="28" font-family="Segoe UI, Arial, sans-serif">
-      Локальный desktop-vault для внешнего диска.
-    </text>
-    <text x="118" y="344" fill="#C9D0D7" font-size="28" font-family="Segoe UI, Arial, sans-serif">
-      Автопоиск, lockout, AES-архивы и recovery-поток.
-    </text>
+    <text x="118" y="238" fill="#F2F4F7" font-size="84" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="520" lengthAdjust="spacingAndGlyphs">VantaVault</text>
+
+    <text x="118" y="304" fill="#C9D0D7" font-size="27" font-weight="600" font-family="Arial, Helvetica, sans-serif" textLength="510" lengthAdjust="spacingAndGlyphs">Локальный desktop-vault для внешнего диска.</text>
+    <text x="118" y="346" fill="#C9D0D7" font-size="27" font-weight="600" font-family="Arial, Helvetica, sans-serif" textLength="522" lengthAdjust="spacingAndGlyphs">Автопоиск, lockout, AES-архивы и recovery-поток.</text>
+
+    <rect x="118" y="392" width="168" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
+    <text x="152" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
+
+    <rect x="304" y="392" width="138" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
+    <text x="344" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AES ZIP</text>
+
+    <rect x="460" y="392" width="176" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
+    <text x="501" y="420" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
+
+    <text x="118" y="506" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="432" lengthAdjust="spacingAndGlyphs">Настройки по умолчанию</text>
+    <text x="118" y="544" fill="#A7B0BA" font-size="22" font-family="Arial, Helvetica, sans-serif" textLength="500" lengthAdjust="spacingAndGlyphs">Целевой диск · Finder / Explorer · Recovery-архив</text>
   </g>
 
-  <g>
-    <rect x="118" y="390" width="168" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="152" y="418" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AUTO DETECT</text>
-
-    <rect x="304" y="390" width="138" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="344" y="418" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">AES ZIP</text>
-
-    <rect x="460" y="390" width="176" height="44" rx="22" fill="#11161D" stroke="#2E353E"/>
-    <text x="501" y="418" fill="#E9EDF2" font-size="16" font-family="Courier New, Menlo, monospace">SAFE LOCKOUT</text>
+  <g filter="url(#softBlur)" opacity="0.24">
+    <rect x="728" y="122" width="384" height="384" rx="30" fill="#C1CAD4"/>
   </g>
 
-  <g>
-    <text x="118" y="500" fill="#F2F4F7" font-size="29" font-weight="700" font-family="Georgia, Times New Roman, serif">Настройки по умолчанию</text>
-    <text x="118" y="538" fill="#A7B0BA" font-size="23" font-family="Segoe UI, Arial, sans-serif">Целевой диск · Finder / Explorer · Recovery-архив</text>
-  </g>
+  <g clip-path="url(#panelClip)">
+    <rect x="728" y="114" width="384" height="392" rx="30" fill="url(#panel)" stroke="#2D343D"/>
 
-  <g filter="url(#softBlur)" opacity="0.28">
-    <rect x="714" y="122" width="412" height="382" rx="30" fill="#C1CAD4"/>
-  </g>
+    <rect x="760" y="148" width="320" height="58" rx="19" fill="#0C1016" stroke="#2A313A"/>
+    <circle cx="804" cy="177" r="11" fill="#F2F4F7"/>
+    <text x="834" y="187" fill="#F2F4F7" font-size="22" font-weight="600" font-family="Arial, Helvetica, sans-serif">VantaVault connected</text>
 
-  <g>
-    <rect x="718" y="112" width="408" height="392" rx="30" fill="url(#panel)" stroke="#2D343D"/>
+    <rect x="760" y="228" width="320" height="124" rx="24" fill="#0E1218" stroke="#2A313A"/>
+    <path d="M790 270H1048" stroke="url(#track)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="988" cy="270" r="18" fill="#E7EBF0"/>
+    <text x="790" y="314" fill="#919AA5" font-size="17" font-family="Courier New, Menlo, monospace">TARGET DISK</text>
+    <text x="790" y="342" fill="#F2F4F7" font-size="23" font-weight="700" font-family="Arial, Helvetica, sans-serif" textLength="256" lengthAdjust="spacingAndGlyphs">VantaVault / Mounted / Ready</text>
 
-    <rect x="748" y="144" width="348" height="62" rx="20" fill="#0C1016" stroke="#2A313A"/>
-    <circle cx="786" cy="175" r="11" fill="#F2F4F7"/>
-    <text x="814" y="184" fill="#F2F4F7" font-size="23" font-family="Segoe UI, Arial, sans-serif">VantaVault connected</text>
+    <rect x="760" y="380" width="150" height="104" rx="20" fill="#0C1016" stroke="#2A313A"/>
+    <text x="782" y="408" fill="#919AA5" font-size="15" font-family="Courier New, Menlo, monospace">LOGIN GUARD</text>
+    <text x="782" y="444" fill="#F2F4F7" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">5 attempts</text>
+    <text x="782" y="468" fill="#B6BEC7" font-size="14" font-family="Arial, Helvetica, sans-serif">temporary lockout</text>
 
-    <rect x="748" y="228" width="348" height="122" rx="24" fill="#0E1218" stroke="#2A313A"/>
-    <path d="M776 270H1068" stroke="url(#track)" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="986" cy="270" r="18" fill="#E7EBF0"/>
-    <text x="776" y="312" fill="#919AA5" font-size="18" font-family="Courier New, Menlo, monospace">TARGET DISK</text>
-    <text x="776" y="340" fill="#F2F4F7" font-size="26" font-weight="700" font-family="Segoe UI, Arial, sans-serif">VantaVault / Mounted / Ready</text>
-
-    <rect x="748" y="374" width="166" height="108" rx="20" fill="#0C1016" stroke="#2A313A"/>
-    <text x="772" y="404" fill="#919AA5" font-size="16" font-family="Courier New, Menlo, monospace">LOGIN GUARD</text>
-    <text x="772" y="442" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Segoe UI, Arial, sans-serif">5 attempts</text>
-    <text x="772" y="466" fill="#B6BEC7" font-size="16" font-family="Segoe UI, Arial, sans-serif">temporary lockout mode</text>
-
-    <rect x="930" y="374" width="166" height="108" rx="20" fill="#0C1016" stroke="#2A313A"/>
-    <text x="954" y="404" fill="#919AA5" font-size="16" font-family="Courier New, Menlo, monospace">AES BACKUP</text>
-    <text x="954" y="442" fill="#F2F4F7" font-size="31" font-weight="700" font-family="Segoe UI, Arial, sans-serif">256-bit</text>
-    <text x="954" y="466" fill="#B6BEC7" font-size="16" font-family="Segoe UI, Arial, sans-serif">local archive flow</text>
+    <rect x="930" y="380" width="150" height="104" rx="20" fill="#0C1016" stroke="#2A313A"/>
+    <text x="952" y="408" fill="#919AA5" font-size="15" font-family="Courier New, Menlo, monospace">AES BACKUP</text>
+    <text x="952" y="444" fill="#F2F4F7" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">256-bit</text>
+    <text x="952" y="468" fill="#B6BEC7" font-size="14" font-family="Arial, Helvetica, sans-serif">local archive flow</text>
   </g>
 </svg>
