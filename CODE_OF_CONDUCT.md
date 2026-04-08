@@ -1,35 +1,35 @@
 # Code of Conduct
 
-Проект `VantaVault` ожидает спокойное, уважительное и технически содержательное взаимодействие.
+`VantaVault` expects calm, respectful, product-focused collaboration.
 
-## Мы ожидаем
+## Expected behavior
 
-- уважительное общение без личных выпадов;
-- критику идей и решений, а не людей;
-- ясные баг-репорты, `PR` и обсуждения;
-- готовность принимать обратную связь;
-- бережное отношение к темам безопасности и данным пользователей.
+- respectful communication
+- criticism of ideas and implementation choices, not people
+- clear bug reports, PR descriptions, and technical discussions
+- willingness to receive feedback
+- care around security and user data topics
 
-## Не допускается
+## Unacceptable behavior
 
-- оскорбительное, унижающее или агрессивное поведение;
-- спам, флуд и намеренное разрушение обсуждений;
-- публикация приватных данных без разрешения;
-- публикация exploit-деталей до согласованного раскрытия;
-- harassment в issues, discussions, review-комментариях или других каналах проекта.
+- harassment or personal attacks
+- abusive, hostile, or degrading language
+- spam or deliberate disruption
+- sharing private data without permission
+- posting exploit details before responsible disclosure
 
-## Полномочия maintainers
+## Maintainer responsibilities
 
-Maintainers могут:
+Maintainers may:
 
-- просить изменить тон или формат общения;
-- скрывать или удалять нерелевантный контент;
-- закрывать обсуждения, которые мешают работе над проектом;
-- ограничивать участие пользователей, нарушающих эти правила.
+- ask contributors to change tone or format
+- hide or remove disruptive content
+- close threads that block productive work
+- limit participation for repeated violations
 
-## Если возникла проблема
+## Reporting problems
 
-- для конфликтов поведения откройте issue с минимально необходимыми деталями или свяжитесь с maintainers;
-- для уязвимостей используйте [SECURITY.md](SECURITY.md).
+- for conduct issues, contact maintainers or open a minimal issue if needed
+- for vulnerabilities, use [SECURITY.md](SECURITY.md)
 
-Участие в проекте означает согласие с этими правилами.
+Participation in the repository implies agreement with these rules.

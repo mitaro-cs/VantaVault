@@ -1,44 +1,44 @@
 # Security Policy
 
-`VantaVault` работает с локальным доступом к данным и внешним носителям, поэтому вопросы безопасности для проекта приоритетны.
+`VantaVault` works with local authentication, removable drives, and encrypted archives, so security reports are treated seriously.
 
-## Supported Versions
+## Supported versions
 
-| Версия | Поддержка |
+| Version | Status |
 | --- | --- |
 | `main` | active |
 | latest release | active |
 | older releases | best effort |
 
-## Как сообщить о проблеме
+## Reporting a vulnerability
 
-Если вы нашли уязвимость:
+If you believe you found a vulnerability:
 
-- не публикуйте детали в открытом `issue`;
-- подготовьте короткое описание проблемы, impact и шаги воспроизведения;
-- приложите версию приложения, `OS`, и затронутый сценарий;
-- отправьте private security report через GitHub Security Advisories, если репозиторий опубликован, или свяжитесь с maintainers приватно.
+- do not post exploit details in a public issue
+- prepare a short description, impact, and reproduction notes
+- include the app version, platform, and affected flow
+- use a private security reporting route when available
 
-Если private reporting еще не включен, создайте issue без exploit-деталей и попросите безопасный канал связи.
+If private reporting is not enabled yet, open a minimal issue without exploit details and request a private contact channel.
 
-## Что желательно приложить
+## Helpful report details
 
-- где именно возникает проблема;
-- нужен ли физически подключенный диск;
-- можно ли воспроизвести на чистой настройке;
-- влияет ли проблема на доступ к данным, обход авторизации или архивацию.
+- where the issue happens
+- whether a physical disk is required
+- whether it reproduces on a clean setup
+- whether it affects authentication, archive handling, or local data access
 
-## Что происходит дальше
+## What happens next
 
-- отчет подтверждается и triage-ится;
-- если проблема воспроизводится, фикс готовится в `main`;
-- после исправления issue/advisory можно раскрыть публично;
-- если нужен релиз, патч попадает в ближайшую версию.
+- the report is reviewed and triaged
+- if confirmed, a fix is prepared in `main`
+- a release can be published if the issue warrants one
+- public disclosure can happen after a fix is available
 
-## Out of Scope
+## Out of scope
 
-Обычно не считаются критическими:
+Usually not considered critical on their own:
 
-- локальные баги интерфейса без влияния на защиту или данные;
-- проблемы в устаревших локальных сборках без подтверждения на `main` или latest release;
-- уязвимости в сторонних зависимостях без воспроизводимого impact в проекте.
+- cosmetic UI issues with no security impact
+- dependency notices without a demonstrated impact in this project
+- issues that cannot be reproduced on `main` or the latest release

@@ -1,5 +1,5 @@
 name: Bug report
-description: Сообщить о проблеме в приложении, релизе или документации
+description: Report a product, release, or documentation problem
 title: "[Bug]: "
 labels:
   - bug
@@ -7,50 +7,50 @@ body:
   - type: markdown
     attributes:
       value: |
-        Спасибо за отчет. Пожалуйста, опишите проблему как можно конкретнее.
+        Thanks for reporting this. Please make the problem easy to reproduce.
 
   - type: input
     id: summary
     attributes:
-      label: Кратко
-      description: Одним предложением, что сломалось?
-      placeholder: После подключения диска приложение не переключается на VantaVault
+      label: Summary
+      description: What broke?
+      placeholder: The app does not switch to the preferred drive after it is mounted
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: Шаги воспроизведения
-      description: Что нужно сделать, чтобы увидеть проблему?
+      label: Steps to reproduce
+      description: What should someone do to see the bug?
       placeholder: |
-        1. Запустить приложение
-        2. Подключить внешний диск
-        3. Открыть vault
-        4. Увидеть ошибку
+        1. Launch the app
+        2. Connect the external drive
+        3. Open the vault
+        4. Observe the bug
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Ожидаемое поведение
-      placeholder: Приложение должно автоматически увидеть диск и предложить открыть его
+      label: Expected behavior
+      placeholder: The app should detect the drive and offer to open it
     validations:
       required: true
 
   - type: textarea
     id: actual
     attributes:
-      label: Фактическое поведение
-      placeholder: Статус остается disconnected, хотя диск уже смонтирован
+      label: Actual behavior
+      placeholder: The status remains disconnected even though the drive is mounted
     validations:
       required: true
 
   - type: dropdown
     id: platform
     attributes:
-      label: Платформа
+      label: Platform
       options:
         - macOS
         - Windows
@@ -62,13 +62,13 @@ body:
   - type: input
     id: version
     attributes:
-      label: Версия
-      description: Номер релиза или commit, если известно
+      label: Version
+      description: Release number or commit if known
       placeholder: v0.2.0
 
   - type: textarea
     id: logs
     attributes:
-      label: Логи или скриншоты
-      description: Добавьте логи, trace, скриншоты или дополнительные детали
+      label: Logs or screenshots
+      description: Add logs, trace output, screenshots, or any useful details
       render: text

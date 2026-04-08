@@ -1,5 +1,5 @@
 name: Feature request
-description: Предложить новую возможность или улучшение UX
+description: Suggest a product feature or UX improvement
 title: "[Feature]: "
 labels:
   - enhancement
@@ -7,44 +7,44 @@ body:
   - type: markdown
     attributes:
       value: |
-        Опишите идею так, чтобы было понятно, какую задачу она решает для пользователя.
+        Describe the idea in a way that makes the user value obvious.
 
   - type: input
     id: summary
     attributes:
-      label: Кратко
-      description: Как называется идея?
-      placeholder: Добавить onboarding для первого подключения диска
+      label: Summary
+      description: What is the idea?
+      placeholder: Add a first-run onboarding flow for selecting the target drive
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: Какую проблему это решает
-      placeholder: Пользователь не понимает, какой диск нужно выбрать в первый запуск
+      label: What problem does it solve
+      placeholder: A new user does not understand which external disk should be selected on first launch
     validations:
       required: true
 
   - type: textarea
     id: proposal
     attributes:
-      label: Предлагаемое решение
-      placeholder: Добавить мастер первого запуска с выбором целевого диска и параметров по умолчанию
+      label: Proposed solution
+      placeholder: Add a first-run wizard for selecting the target drive and default behavior
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Альтернативы
-      description: Есть ли другой путь решить эту же проблему?
-      placeholder: Можно ограничиться подсказкой в настройках, но полноценный onboarding понятнее
+      label: Alternatives
+      description: Is there another way to solve the same problem?
+      placeholder: A tooltip in settings would help, but a full onboarding flow would be clearer
 
   - type: dropdown
     id: area
     attributes:
-      label: Область
+      label: Area
       options:
         - Desktop app
         - Web UI

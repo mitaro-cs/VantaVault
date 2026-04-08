@@ -1,24 +1,26 @@
 # Getting Started
 
-`VantaVault` можно запустить двумя способами:
+There are two normal ways to use `VantaVault`:
 
-1. скачать готовый релиз из `GitHub Releases`;
-2. развернуть приложение локально из репозитория одной командой.
+1. download a ready-made release
+2. run the project directly from source
 
-## Вариант 1. Скачать готовый релиз
+## Option 1. Download a Release
 
-Открой:
+Open:
 
 - `https://github.com/mitaro-cs/VantaVault/releases/latest`
 
-Скачай файл под свою систему:
+Choose the file for your platform:
 
 - `VantaVault-vX.Y.Z-macos.dmg`
 - `VantaVault-vX.Y.Z-windows-x64.exe`
 
-Если хочешь проверить загрузку, рядом лежат `SHA256`-файлы.
+Optional:
 
-## Вариант 2. Запуск из репозитория
+- verify the file with the matching `SHA256` asset
+
+## Option 2. Run From Source
 
 ### macOS / Linux
 
@@ -29,7 +31,7 @@ chmod +x main
 ./main
 ```
 
-### Windows
+### Windows PowerShell
 
 ```powershell
 git clone https://github.com/mitaro-cs/VantaVault.git
@@ -37,24 +39,24 @@ cd VantaVault
 .\main.ps1
 ```
 
-Или двойным кликом:
+### Windows double click
 
-- `main.bat`
+- open `main.bat`
 
-## Что делает bootstrap
+## What the bootstrap script does
 
-При первом запуске скрипт:
+On the first run it:
 
-- создает локальное окружение `.venv`;
-- ставит зависимости из `requirements-desktop.txt`;
-- запускает `desktop.py`.
+- creates a local `.venv`
+- installs dependencies from `requirements-desktop.txt`
+- launches the app
 
-При следующих запусках:
+On later runs it:
 
-- использует уже готовое окружение;
-- переустанавливает зависимости только если изменился `requirements-desktop.txt`.
+- reuses the existing environment
+- reinstalls dependencies only when `requirements-desktop.txt` changes
 
-## Если нужен только install
+## Install without launching
 
 ### macOS / Linux
 
@@ -68,13 +70,13 @@ cd VantaVault
 .\main.ps1 --install-only
 ```
 
-## Первый запуск
+## First Launch
 
-После старта приложение:
+When `VantaVault` opens for the first time:
 
-- откроет локальное окно desktop-app;
-- предложит создать пароль, если vault запускается впервые;
-- покажет статус целевого внешнего диска;
-- даст открыть настройки и выбрать диск по умолчанию.
+- set a local password
+- choose your preferred removable drive
+- open the settings if you want default behavior
+- start working inside the vault
 
-Если desktop shell недоступен, `VantaVault` откроет локальную web-версию в браузере.
+If the desktop shell is unavailable, the app falls back to the local browser version automatically.

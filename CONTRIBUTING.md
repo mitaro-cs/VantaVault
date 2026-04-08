@@ -1,79 +1,66 @@
 # Contributing to VantaVault
 
-Спасибо за интерес к `VantaVault`.
+Thanks for your interest in improving `VantaVault`.
 
-Репозиторий открыт для использования, баг-репортов, улучшений интерфейса, исправлений безопасности, документации и `pull request`.
+This repository is open to:
 
-## Прежде чем начинать
+- bug fixes
+- UX improvements
+- documentation updates
+- release and packaging improvements
+- tests
+- well-scoped product features
 
-- для небольших исправлений можно сразу открывать `PR`;
-- для крупных изменений лучше сначала создать `issue` и коротко описать идею;
-- если проблема касается безопасности, не публикуйте детали в открытом issue, а используйте инструкции из [SECURITY.md](SECURITY.md).
+## Before you start
 
-## Локальный запуск
+- for small fixes, a direct PR is fine
+- for larger changes, open an issue first so the direction is clear
+- for security-sensitive findings, follow [SECURITY.md](SECURITY.md) instead of posting public exploit details
 
-Установить зависимости:
+## Local setup
+
+Install and launch:
 
 ```bash
-python3 -m pip install -r requirements-desktop.txt
+./main
 ```
 
-Запустить desktop-режим:
+Or install only:
 
 ```bash
-python3 desktop.py
+./main --install-only
 ```
 
-Запустить быстрые проверки:
+## Useful checks
 
 ```bash
-python3 -m py_compile app.py desktop.py tests/test_app.py
+python3 -m py_compile app.py desktop.py scripts/bootstrap.py tests/test_app.py
 python3 -m unittest discover -s tests -v
 ```
 
-## Что особенно полезно проекту
+## Pull request guidelines
 
-- баг-репорты с понятными шагами воспроизведения;
-- улучшения UX и GitHub-витрины;
-- правки `README`, релизного потока и документации;
-- тесты на backend-логику и файловые сценарии;
-- улучшения desktop-сборки под `macOS` и `Windows`.
+- keep changes scoped and easy to review
+- avoid mixing unrelated refactors, features, and visual tweaks in one PR
+- update documentation if behavior changes
+- add or update tests when logic changes
+- include screenshots for UI changes
+- explain how the change was verified
 
-## Правила для pull request
+## Good contribution areas
 
-- делайте изменения узкими и понятными по объему;
-- не смешивайте в одном `PR` рефакторинг, фичи и косметику без причины;
-- обновляйте документацию, если меняется поведение;
-- добавляйте или обновляйте тесты, если меняется логика;
-- для UI-изменений прикладывайте скриншоты;
-- если меняется релизная сборка, укажите, как это проверялось локально.
+- better drive-detection UX
+- archive and recovery workflows
+- release and installer polish
+- README and public docs
+- UI quality and accessibility
+- tests around backend behavior
 
-## Стиль изменений
+## Communication
 
-- придерживайтесь существующей структуры проекта;
-- используйте осмысленные названия и короткие комментарии только там, где они реально нужны;
-- не добавляйте разрушительное поведение для данных без явного обсуждения;
-- если предлагается рискованная защита, сначала опишите trade-off в `issue` или `PR`.
+- be direct and respectful
+- criticize ideas, not people
+- keep technical arguments concrete
+- use issues and PRs to make decisions easy to follow
 
-## Коммиты
-
-Жесткого формата нет, но хороший коммит обычно:
-
-- описывает конкретное изменение;
-- не содержит несколько несвязанных правок;
-- помогает понять, что и зачем было сделано.
-
-Примеры:
-
-- `add github issue templates`
-- `improve vault disk detection state`
-- `fix archive extraction path validation`
-
-## Коммуникация
-
-- будьте конкретны;
-- уважайте время других участников;
-- обсуждайте архитектурные решения по существу;
-- спорьте с аргументами, а не с людьми.
-
-Условия поведения сообщества описаны в [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Project behavior expectations are defined in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).

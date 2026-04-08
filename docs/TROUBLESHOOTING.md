@@ -1,76 +1,73 @@
 # Troubleshooting
 
-## Python не найден
+## Python is not found
 
-Симптом:
+Symptoms:
 
-- `python` или `python3` не найден;
-- `main.ps1` или `main.bat` завершается сразу.
+- `python` or `python3` is missing
+- `main.ps1` or `main.bat` exits immediately
 
-Что делать:
+Fix:
 
-- установите Python 3;
-- на Windows удобно включить опцию `Add python.exe to PATH`;
-- после установки повторите запуск bootstrap-скрипта.
+- install Python 3
+- on Windows, enable the option to add Python to `PATH`
+- run the bootstrap script again
 
-## Не создается `.venv`
+## `.venv` cannot be created
 
-Симптом:
+Symptoms:
 
-- bootstrap падает на шаге `python -m venv`;
-- окружение не создается.
+- bootstrap fails during `python -m venv`
+- no local environment is created
 
-Что делать:
+Fix:
 
-- убедитесь, что установлен стандартный модуль `venv`;
-- на Linux иногда нужен отдельный пакет вроде `python3-venv`;
-- повторите `./main --install-only` или `.\main.ps1 --install-only`.
+- make sure the standard `venv` module is available
+- on Linux you may need a package such as `python3-venv`
+- run `./main --install-only` or `.\main.ps1 --install-only` again
 
-## Приложение открылось в браузере, а не в окне
+## The app opens in a browser instead of a native window
 
-Это fallback-режим.
+This means the local backend started but the desktop shell was not available at runtime.
 
-Что это значит:
+What to do:
 
-- локальный сервер запустился;
-- модуль desktop-shell не был доступен во время запуска.
+- rerun bootstrap and confirm dependencies installed correctly
+- check `requirements-desktop.txt`
+- use the browser fallback if the native shell is unavailable on the machine
 
-Что делать:
+## The preferred drive is not detected
 
-- снова прогоните bootstrap;
-- проверьте, что зависимости из `requirements-desktop.txt` установились без ошибок.
+Check:
 
-## Диск не определяется
+- the drive is physically connected
+- the volume is mounted by the OS
+- the correct target disk is selected in settings
+- the app has been refreshed after the drive appeared
 
-Проверьте:
+## macOS warns before opening the app
 
-- диск физически подключен;
-- том смонтирован системой;
-- в настройках указан правильный target disk;
-- после подключения нажмите `Обновить`, если автодетект еще не сработал.
+This can happen with a new or unsigned local build.
 
-## macOS предупреждает о приложении
+Typical fixes:
 
-Если используется неподписанный локальный билд или свежий `dmg`, `macOS` может показать предупреждение.
+- open the app from the context menu and choose `Open`
+- confirm the system dialog
+- allow the app in `Privacy & Security` if needed
 
-Обычно помогает:
+## Windows SmartScreen shows a warning
 
-- открыть приложение через контекстное меню `Open`;
-- подтвердить запуск в системном диалоге;
-- при необходимости разрешить запуск в `Privacy & Security`.
+This is common for a new or locally built `.exe`.
 
-## Windows SmartScreen показывает предупреждение
+What to do:
 
-Это возможно для нового или локально собранного `.exe`.
+- download only from official GitHub Releases
+- verify the file with the provided checksum if needed
+- if you trust the source, use `More info` and then `Run anyway`
 
-Что делать:
+## Need more help
 
-- скачивайте файл только из `GitHub Releases`;
-- при необходимости нажмите `More info` и затем `Run anyway`, если вы доверяете источнику;
-- сверяйте `SHA256`, если хотите проверить файл перед запуском.
-
-## Где искать help
-
-- общий быстрый старт: [GETTING_STARTED.md](GETTING_STARTED.md)
-- безопасность: [SECURITY.md](../SECURITY.md)
-- баг-репорт: [bug_report.yml](../.github/ISSUE_TEMPLATE/bug_report.yml)
+- quick start: [GETTING_STARTED.md](GETTING_STARTED.md)
+- FAQ: [FAQ.md](FAQ.md)
+- support routes: [../SUPPORT.md](../SUPPORT.md)
+- security reports: [../SECURITY.md](../SECURITY.md)
