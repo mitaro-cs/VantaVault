@@ -5,8 +5,8 @@
 <h1 align="center">VantaVault</h1>
 
 <p align="center">
-  <strong>A premium desktop vault for removable drives.</strong><br>
-  Quiet local access, preferred disk awareness, and encrypted archive flow in one deliberate workspace.
+  <strong>🔒 Твой личный сейф для внешних дисков — просто, красиво, безопасно!</strong><br>
+  <em>Доступно для всех. Без облака. Только ты и твои файлы.</em>
 </p>
 
 <p align="center">
@@ -28,39 +28,48 @@
   <a href="#security">Security</a>
 </p>
 
-## Overview
+## 🚀 Для кого VantaVault?
 
-`VantaVault` is built for one very specific job: turning an external drive into a calm,
-high-quality desktop workspace.
+- Для всех, кто ценит приватность и простоту
+- Для студентов, фрилансеров, семей и профессионалов
+- Для тех, кто хочет хранить файлы на своих условиях
+
+---
+
+## 🌟 Ключевые возможности
 
 <table>
   <tr>
-    <td width="33.33%" valign="top">
-      <h3>Disk-aware</h3>
-      <p>Knows when the preferred removable drive is mounted, missing, or ready.</p>
+    <td align="center" width="33%">
+      <img src="https://img.icons8.com/ios-filled/100/lock--v1.png" width="48"/><br>
+      <b>Локальная безопасность</b><br>
+      Всё хранится только у тебя. Без облака, без лишних рисков.
     </td>
-    <td width="33.33%" valign="top">
-      <h3>Local-first</h3>
-      <p>Keeps access behind local authentication and safe lockout without cloud services.</p>
+    <td align="center" width="33%">
+      <img src="https://img.icons8.com/ios-filled/100/hard-drive.png" width="48"/><br>
+      <b>Диск-ориентированность</b><br>
+      Автоматически определяет твой внешний диск и защищает его.
     </td>
-    <td width="33.33%" valign="top">
-      <h3>Archive-ready</h3>
-      <p>Creates and restores local AES archives from the same workspace.</p>
+    <td align="center" width="33%">
+      <img src="https://img.icons8.com/ios-filled/100/archive-folder.png" width="48"/><br>
+      <b>Архивирование</b><br>
+      Создавай и восстанавливай зашифрованные архивы в пару кликов.
     </td>
   </tr>
 </table>
 
-## Download
+## 📥 Как начать?
 
-The easiest path is [Latest Release](https://github.com/mitaro-cs/VantaVault/releases/latest).
+1. <b>Скачай последнюю версию:</b> [Релизы](https://github.com/mitaro-cs/VantaVault/releases/latest)
+2. <b>Установи и запусти:</b>
+   - macOS: <code>VantaVault-mac.dmg</code>
+   - Windows: <code>VantaVault-windows-x64.exe</code>
+3. <b>Следуй простым подсказкам на экране!</b>
 
-- `VantaVault-vX.Y.Z-macos.dmg`
-- `VantaVault-vX.Y.Z-windows-x64.exe`
-- `SHA256` verification files
+## 🛠️ Запуск из исходников
 
-## Run From Source
-
-### macOS / Linux
+<details>
+<summary>macOS / Linux</summary>
 
 ```bash
 git clone https://github.com/mitaro-cs/VantaVault.git
@@ -68,40 +77,53 @@ cd VantaVault
 chmod +x main
 ./main
 ```
+</details>
 
-### Windows
+<details>
+<summary>Windows</summary>
 
 ```powershell
 git clone https://github.com/mitaro-cs/VantaVault.git
 cd VantaVault
 .\main.ps1
 ```
-
-Or open `main.bat`.
+или открой <code>main.bat</code>
+</details>
 
 ## Product Flow
 
 <p align="center">
-  <img src="assets/github-flow.svg" alt="VantaVault Product Flow" width="100%">
+  <img src="assets/github-flow.svg" alt="VantaVault Product Flow" width="80%">
 </p>
 
-## Documentation
+---
 
-- [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md)
-- [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
-- [docs/FAQ.md](docs/FAQ.md)
-- [SUPPORT.md](SUPPORT.md)
-- [CONTRIBUTING.md](CONTRIBUTING.md)
+<p align="center">
+  <img src="/var/folders/62/jd1lqt9j75zdkdqsjg2zmzsc0000gn/T/copilot-image-694f18.png" alt="VantaVault UI Demo" width="60%">
+</p>
 
-## Security
 
-- local `PBKDF2-SHA256` password storage
-- local session protection
-- temporary lockout on repeated failures
-- local AES archive creation
+## 📚 Документация и поддержка
 
-See [SECURITY.md](SECURITY.md) for reporting guidance.
+- [Начало работы](docs/GETTING_STARTED.md)
+- [FAQ](docs/FAQ.md)
+- [Техническая поддержка](SUPPORT.md)
+- [Внести вклад](CONTRIBUTING.md)
 
-## License
+## 🛡️ Безопасность
 
-Released under the `MIT` license. See [LICENSE](LICENSE).
+- Локальное хранение паролей (PBKDF2-SHA256)
+- Защита сессии и временная блокировка при ошибках
+- Локальное шифрование архивов (AES)
+
+Подробнее: [SECURITY.md](SECURITY.md)
+
+## 📝 Лицензия
+
+MIT. Свободно для всех. [LICENSE](LICENSE)
+
+---
+
+<p align="center">
+  <sub>Сделано с ❤️ для людей. Присоединяйся!</sub>
+</p>
