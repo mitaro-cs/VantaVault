@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/github-banner.svg" alt="VantaVault GitHub Banner" width="100%">
+  <img src="assets/github-banner.svg" alt="VantaVault GitHub Banner" width="60%" style="border-radius:32px;box-shadow:0 8px 32px #0002;">
 </p>
 
 <h1 align="center">VantaVault</h1>
@@ -38,25 +38,14 @@
 
 ## 🌟 Ключевые возможности
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="https://img.icons8.com/ios-filled/100/lock--v1.png" width="48"/><br>
-      <b>Локальная безопасность</b><br>
-      Всё хранится только у тебя. Без облака, без лишних рисков.
-    </td>
-    <td align="center" width="33%">
-      <img src="https://img.icons8.com/ios-filled/100/hard-drive.png" width="48"/><br>
-      <b>Диск-ориентированность</b><br>
-      Автоматически определяет твой внешний диск и защищает его.
-    </td>
-    <td align="center" width="33%">
-      <img src="https://img.icons8.com/ios-filled/100/archive-folder.png" width="48"/><br>
-      <b>Архивирование</b><br>
-      Создавай и восстанавливай зашифрованные архивы в пару кликов.
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="assets/premium-icons.svg" alt="Premium Features" width="420px" style="margin-bottom:24px;">
+</div>
+
+- **Локальная безопасность** — только у вас, без облака
+- **Диск-ориентированность** — автоматическое определение и защита
+- **Архивирование** — шифрование и восстановление в пару кликов
+
 
 ## 📥 Как начать?
 
@@ -93,13 +82,14 @@ cd VantaVault
 ## Product Flow
 
 <p align="center">
-  <img src="assets/github-flow.svg" alt="VantaVault Product Flow" width="80%">
+  <img src="assets/github-flow.svg" alt="VantaVault Product Flow" width="60%" style="margin:32px 0;">
 </p>
 
 ---
 
 <p align="center">
-  <img src="/var/folders/62/jd1lqt9j75zdkdqsjg2zmzsc0000gn/T/copilot-image-694f18.png" alt="VantaVault UI Demo" width="60%">
+  <img src="assets/mockup-premium.png" alt="VantaVault Premium Mockup" width="50%" style="border-radius:32px;box-shadow:0 8px 32px #0003;">
+  <br><sub>Премиальный интерфейс. Ваши данные — ваша приватность.</sub>
 </p>
 
 
